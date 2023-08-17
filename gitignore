@@ -9,3 +9,4 @@ undefined
 flsStartTemplate/
 package-lock.json
 phpmailer/
+.vscode/

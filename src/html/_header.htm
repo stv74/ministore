@@ -1,4 +1,46 @@
 <header class="header">
 	<div class="header__container">
+		<div class="header__logo">
+			<a href="#"><img src="@img/logo.svg" alt="Logo"></a>
+		</div>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#" class="menu__link active">Home</a></li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Shop</a>
+						<span class="menu__arrow arrow"></span>
+						<ul class="menu__submenu submenu">
+							<li class="submenu__item"><a href="#" class="submenu__link">Category Category Category 1234567890</a></li>
+							<li class="submenu__item"><a href="#" class="submenu__link">Category 2</a></li>
+							<li class="submenu__item"><a href="#" class="submenu__link">Category 3</a></li>
+							<li class="submenu__item"><a href="#" class="submenu__link">Category 4</a></li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Contacts Contacts Contacts</a></li>
+				</ul>
+			</nav>			
+		</div>
+		<div data-da=".menu__body,480" class="header__buttons">
+			<button class="header__button">
+				<svg>
+					<use xlink:href="@img/icons/icons.svg#search"></use>
+				</svg>
+			</button>
+			<a href="#" class="header__button">
+				<svg>
+					<use xlink:href="@img/icons/icons.svg#person"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__button">
+				<svg>
+					<use xlink:href="@img/icons/icons.svg#cart"></use>
+				</svg>
+				<span>(0)</span>
+			</a>
+		</div>
+		<button type="button" class="menu__icon icon-menu"><span></span></button>
 	</div>
 </header>
