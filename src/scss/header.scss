@@ -1,263 +1,259 @@
 .header {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 50;
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		min-height: 72px;
-		color: var(--primary);
-		font-size: rem(14);
-		font-weight: 500;
-		line-height: 1.48; 
-		letter-spacing: 1.4px;
-		text-transform: uppercase;
-	}
-	&__logo {
-		width: 140px;
-		position: relative;
-		z-index: 2;
-		img {
-			max-width: 100%;
-		}
-	}
-	&__buttons {
-		display: flex;
-		column-gap: rem(19);
-		position: relative;
-		z-index: 2;
-		@media (max-width:$mobileSmall){
-			 padding-top: rem(40);
-			 column-gap: rem(35);
-		}
-	}
-	&__button {
-		display: flex;
-		align-items: center;
-		svg {
-			width: rem(18);
-			height: rem(18);
-			@media (max-width:$mobileSmall){
-				width: rem(32);
-				height: rem(32);  
-			}
-		}
-		span {
-			font-size: rem(12);
-			letter-spacing: 1.2px;
-			text-transform: uppercase;
-			@media (max-width:$mobileSmall){
-				 font-size: rem(18); 
-			}
-		}				
-	}
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: rem(72);
+        color: var(--primary);
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: em(1.4, 14);
+        text-transform: uppercase;
+    }
+    &__logo {
+        width: 140px;
+        position: relative;
+        z-index: 2;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__buttons {
+        display: flex;
+        column-gap: 19px;
+        position: relative;
+        z-index: 2;
+        @media (max-width: $mobileSmall) {
+            padding-top: 40px;
+            justify-content: space-evenly;
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        svg {
+            width: rem(18);
+            height: rem(18);
+            @media (max-width: $mobileSmall) {
+                width: rem(32);
+                height: rem(32);
+            }
+        }
+        span {
+            font-size: rem(12);
+            letter-spacing: em(1.2, 12);
+            text-transform: uppercase;
+            @media (max-width: $mobileSmall) {
+                font-size: rem(18);
+            }
+        }
+    }
 }
 
 .menu {
-	flex: 1 1 auto;
-	&__body {
-		display: flex;
-		justify-content: flex-end;
-		@include adaptiveValue("padding-right", 120, 40, 0, 1300, 768);
-		padding-left: rem(15);
-		@media (max-width:$mobile){
-			position: fixed; 
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			flex-direction: column;
-			justify-content: start;
-			align-items: center;
-			overflow: auto;
-			transition: all 0.3s ease 0s;
-			@include adaptiveValue("padding-top", 180, 120, 2, 768, 320);
-			padding-left: rem(15);
-			padding-right: rem(15);
-			padding-bottom: rem(30);
-			&::before {
-				content: '';
-				position: fixed;
-				width: 100%;
-				height: rem(72);
-				top: 0;
-				left: -100%;
-				z-index: 2;
-				background-color: var(--bg-primary);
-				transition: all 0.3s ease 0s;
-			}
-			.menu-open & {
-				left: 0;
-				&::before {
-					left: 0;
-				}
-			}
-		}
-	}
-	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		@include adaptiveValue("column-gap", 44, 30, 0, 1300, 768);
-		@media (max-width:$mobile){
-			 flex-direction: column;
-			 row-gap: rem(20); 
-		}
-	}
-	&__item {
-		position: relative;
-		padding: rem(10) 0;
-		@media (any-hover: hover) {
-			&:hover .submenu {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
-	}
-	&__link {
-		transition: all 0.3s ease 0s; 
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--secondary);
-			}
-		}
-		&.active {
-			font-weight: 700;
-			color: var(--secondary);
-		}
-		&.parent {
-			margin-right: rem(30);
-		}
-		@media (max-width:$mobile){
-			 font-size: rem(32);
-		}
-	}
-	&__icon {
-		margin-left: rem(30);
-		margin-right: rem(10);
-	}
+    flex: 1 1 auto;
+    &__body {
+        display: flex;
+        justify-content: flex-end;
+        @include adaptiveValue("padding-right", 120, 40, 0, 1300, 768);
+        padding-left: 15px;
+        @media (max-width: $mobile) {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: start;
+            overflow: auto;
+            transition: all 0.3s ease 0s;
+            @include adaptiveValue("padding-top", 180, 120, 2, 768, 320);
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 30px;
+            &::before {
+                content: "";
+                position: fixed;
+                width: 100%;
+                height: rem(72);
+                top: 0;
+                left: -100%;
+                z-index: 2;
+                background-color: var(--bg-primary);
+                transition: all 0.3s ease 0s;
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiveValue("column-gap", 44, 30, 0, 1300, 768);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+    &__item {
+        position: relative;
+        padding: em(10, 14) 0;
+        @media (any-hover: hover) {
+            &:hover .submenu {
+                display: block;
+            }
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+    &__link {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+        &.active {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        &.parent {
+            margin-right: 30px;
+        }
+        @media (max-width: $mobile) {
+            font-size: rem(32);
+        }
+    }
+    &__icon {
+        margin-left: 30px;
+        margin-right: 10px;
+    }
 }
 
 .arrow {
-	display: none;
-	position: absolute;
-	top: rem(14);
-	right: 0;
-	width: 0;
-	height: 0;
-	border-top: 8px solid var(--primary);
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent;
-	transition: all 0.3s ease 0s;
-	&.active {
-		transform: rotate(180deg);
-	}
-	.touch & {
-		display: block;
-	}
-	@media (max-width:$mobile){
-		top: rem(27);
-		border-top: 12px solid var(--primary);
-		border-right: 12px solid transparent;
-		border-left: 12px solid transparent;
-	}
+    display: none;
+    position: absolute;
+    top: rem(15);
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid var(--primary);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    transition: all 0.3s ease 0s;
+    &.active {
+        transform: rotate(180deg);
+    }
+    .touch & {
+        display: block;
+    }
+    @media (max-width: $mobile) {
+        top: rem(18);
+        border-top: 12px solid var(--primary);
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+    }
 }
 
 // Dropdown menu
 
 .submenu {
-	position: absolute;
-	opacity: 0;
-	visibility: hidden;
-	z-index: 5;
-	top: rem(35);
-	left: rem(-5);
-	min-width: rem(250);
-	border: 1px solid  var(--text-icons);
-	border-radius: 5px;
-	padding: rem(10) 0;
-	font-size: rem(16);
-	transition: all 0.6s ease 0s;
-	&__link {
-		display: block;
-		padding: rem(7) rem(15);
-		// white-space: nowrap;
-		transition: all 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: var(--bg-secondary);
-			}
-		}
-	}
-	&.open {
-		// display: block;
-		opacity: 1;
-		visibility: visible;		
-	}
-	@media (max-width:$mobile){
-		display: none;
-		position: static;
-		border: none;
-		padding: 0;
-		margin-top: rem(20);
-		font-size: rem(24);
-		&.open {
-			display: block;
-		}
-	}	
+    position: absolute;
+    display: none;
+    z-index: 5;
+    top: em(35, 16);
+    left: em(-5, 16);
+    white-space: nowrap;
+    border: 1px solid var(--text-icons);
+    border-radius: 5px;
+    padding: em(7, 16) 0;
+    font-size: rem(16);
+    transition: all 0.3s ease 0s;
+    &__item {
+        padding: em(7, 16) em(14, 16);
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--bg-secondary);
+            }
+        }
+        @media (max-width: $mobile) {
+            padding: em(15, 24) em(15, 24);
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    &.open {
+        display: block;
+    }
+    @media (max-width: $mobile) {
+        display: none;
+        position: static;
+        white-space: normal;
+        border: none;
+        padding: 0 0 0 20px;
+        margin-top: 15px;
+        font-size: rem(24);
+    }
 }
 
 //Burger
 
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		z-index: 5;
-		@media (any-hover: none) {
-			cursor: default;
-		}
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: var(--primary);
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			// &::before,
-			// &::after {
-			// }
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        width: rem(30);
+        height: rem(18);
+        z-index: 5;
+        @media (any-hover: none) {
+            cursor: default;
+        }
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: var(--primary);
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - rem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
 }
-
