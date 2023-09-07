@@ -1,15 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__promo promo">
+                    <div class="promo__slider swiper">
+                        <div class="promo__wrapper swiper-wrapper">
+                            <div class="promo__slide slide-promo swiper-slide">
+                                <div class="slide-promo__container">
+                                    <div class="slide-promo__content">
+                                        <div class="slide-promo__title title">
+                                            Your Products are great.
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="slide-promo__button button"
+                                            >Shop Product</a
+                                        >
+                                    </div>
+                                    <div class="slide-promo__img">
+                                        <img
+                                            src="@img/promo/image 1.png"
+                                            alt="Watch"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="promo__slide slide-promo swiper-slide">
+                                <div class="slide-promo__container">
+                                    <div class="slide-promo__content">
+                                        <div class="slide-promo__title title">
+                                            Your Products are great.
+                                        </div>
+                                        <a
+                                            href="#"
+                                            class="slide-promo__button button"
+                                            >Shop Product</a
+                                        >
+                                    </div>
+                                    <div class="slide-promo__img">
+                                        <img
+                                            src="@img/promo/image 1.png"
+                                            alt="Watch"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="swiper-button-prev"
+                        ></button>
+                        <button
+                            type="button"
+                            class="swiper-button-next"
+                        ></button>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>
