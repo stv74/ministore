@@ -1,7 +1,11 @@
 .page {
     &__promo {
     }
+    &__advantages {
+    }
 }
+
+// Promo
 .promo {
     padding-top: rem(72);
     background-color: var(--bg-secondary);
@@ -94,5 +98,57 @@
             opacity: 0.5;
             background-color: var(--bg-primary);
         }
+    }
+}
+
+// Advantages
+.advantages {
+    @include adaptiveValue("padding-top", 120, 70);
+    @include adaptiveValue("padding-bottom", 120, 70);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(55);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            gap: rem(35);
+        }
+    }
+}
+.item-advantage {
+    display: flex;
+    flex: 25%;
+    column-gap: rem(14);
+    @media (max-width: $tablet) {
+        flex: 0 0 rem(285);
+    }
+    @media (max-width: $mobile) {
+        flex: 0 0 rem(270);
+    }
+    &__icon {
+        svg {
+            width: rem(25);
+            height: rem(25);
+            fill: none;
+            stroke: var(--secondary);
+        }
+    }
+    &__title {
+        font-family: Jost;
+        font-size: rem(20);
+        line-height: 1.45;
+        letter-spacing: em(1.2, 20);
+        text-transform: uppercase;
+        margin-bottom: em(4, 20);
+    }
+    &__text {
+        color: var(--text-primary);
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 1.38;
+        letter-spacing: em(0.48, 16);
     }
 }
