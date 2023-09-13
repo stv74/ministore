@@ -18,4 +18,35 @@
     &--fw {
         width: 100%;
     }
+    &_card {
+        padding: em(8, 14) em(30, 14);
+        align-items: center;
+        gap: em(8, 14);
+        span {
+            white-space: nowrap;
+        }
+        svg {
+            width: rem(16);
+            height: rem(16);
+            fill: var(--bg-primary);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--secondary);
+                transition: background-color 0.3s;
+            }
+        }
+        .touch & {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            width: rem(45);
+            height: rem(45);
+            border-radius: 50%;
+            span {
+                display: none;
+            }
+        }
+    }
 }

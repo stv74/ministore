@@ -3,6 +3,8 @@
     }
     &__advantages {
     }
+    &__products {
+    }
 }
 
 // Promo
@@ -104,7 +106,7 @@
 // Advantages
 .advantages {
     @include adaptiveValue("padding-top", 120, 70);
-    @include adaptiveValue("padding-bottom", 120, 70);
+    @include adaptiveValue("padding-bottom", 60, 35);
     &__container {
         display: flex;
         justify-content: space-between;
@@ -137,11 +139,6 @@
         }
     }
     &__title {
-        font-family: Jost;
-        font-size: rem(20);
-        line-height: 1.45;
-        letter-spacing: em(1.2, 20);
-        text-transform: uppercase;
         margin-bottom: em(4, 20);
     }
     &__text {
@@ -151,4 +148,61 @@
         line-height: 1.38;
         letter-spacing: em(0.48, 16);
     }
+}
+
+// Products
+.products {
+    padding: 60px 0 50px;
+    &__container {
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(30);
+    }
+    &__title {
+    }
+    &__link {
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: em(1.4, 14);
+        text-transform: uppercase;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__slider {
+    }
+    &__wrapper {
+        margin-bottom: rem(74);
+    }
+    &__slide {
+    }
+    &__pagination {
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            margin: 0 rem(10) !important;
+            background-color: var(--bg-item);
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: var(--bg-item-activ);
+        }
+    }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.swiper-pagination {
 }
