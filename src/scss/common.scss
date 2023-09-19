@@ -2,7 +2,8 @@
 .title {
     color: var(--primary);
     font-family: Jost;
-    @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
+    font-size: rem(83);
+    // @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
     font-weight: 300;
     line-height: 1.14;
     letter-spacing: em(1.66, 83);

@@ -5,6 +5,8 @@
     }
     &__products {
     }
+    &__discount {
+    }
 }
 
 // Promo
@@ -68,6 +70,7 @@
         }
     }
     &__title {
+        @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
         margin-bottom: em(40, 83);
     }
     &__button {
@@ -160,13 +163,13 @@
         align-items: center;
         margin-bottom: rem(30);
         gap: rem(30);
-        @media (max-width:$mobileSmall){
-             margin-bottom: rem(20); 
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(20);
         }
     }
     &__title {
-        @media (max-width:$mobileSmall){
-             font-size: rem(25); 
+        @media (max-width: $mobileSmall) {
+            font-size: rem(25);
         }
     }
     &__link {
@@ -183,8 +186,8 @@
     }
     &__wrapper {
         margin-bottom: rem(74);
-        @media (max-width:$mobileSmall){
-             margin-bottom: rem(54); 
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(54);
         }
     }
     &__pagination {
@@ -202,4 +205,78 @@
 }
 
 // Discount
-
+.discount {
+    @include adaptiveValue("margin-top", 60, 35);
+    background-color: var(--bg-secondary);
+    &__container {
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    &__content {
+        flex: 0 1 64%;
+        margin: 30px 0;
+        @media (max-width: $mobile) {
+            flex: 0 1 50%;
+        }
+    }
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        font-family: Jost;
+        @include adaptiveValue("font-size", 30, 24, 0, 1330, 480);
+        font-weight: 300;
+        line-height: 1.14;
+        letter-spacing: em(4.8, 30);
+        text-transform: uppercase;
+        margin-bottom: em(28, 30);
+        &::before {
+            content: "";
+            display: inline-block;
+            width: rem(48);
+            height: rem(1);
+            background-color: var(--primary);
+            @media (max-width: $mobile) {
+                width: rem(40);
+            }
+            @media (max-width: $mobileSmall) {
+                width: rem(30);
+            }
+        }
+    }
+    &__title {
+        @include adaptiveValue("font-size", 83, 40, 0, 1330, 480);
+        padding-right: 15px;
+        margin-bottom: em(45, 83);
+    }
+    &__button {
+        @media (max-width: $mobile) {
+            font-size: rem(12);
+        }
+    }
+    &__img {
+        flex: 0 1 36%;
+        @media (max-width: $mobile) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+    &__wrapp-ibg {
+        max-width: rem(780);
+        padding-bottom: 138%;
+        margin-right: -310px;
+        @media (max-width: $mobile) {
+            margin-right: -210px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 0;
+            padding-bottom: 85%;
+        }
+    }
+}
