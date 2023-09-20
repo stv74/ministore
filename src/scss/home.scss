@@ -7,6 +7,8 @@
     }
     &__discount {
     }
+    &__posts {
+    }
 }
 
 // Promo
@@ -109,7 +111,7 @@
 // Advantages
 .advantages {
     @include adaptiveValue("padding-top", 120, 70);
-    @include adaptiveValue("padding-bottom", 60, 35);
+    @include adaptiveValue("padding-bottom", 120, 70);
     &__container {
         display: flex;
         justify-content: space-between;
@@ -155,33 +157,11 @@
 
 // Products
 .products {
-    @include adaptiveValue("padding-top", 60, 35);
-    @include adaptiveValue("padding-bottom", 50, 25);
-    &__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @include adaptiveValue("padding-bottom", 110, 60);
+    &__head {
         margin-bottom: rem(30);
-        gap: rem(30);
         @media (max-width: $mobileSmall) {
             margin-bottom: rem(20);
-        }
-    }
-    &__title {
-        @media (max-width: $mobileSmall) {
-            font-size: rem(25);
-        }
-    }
-    &__link {
-        font-size: rem(14);
-        font-weight: 500;
-        line-height: 1.48;
-        letter-spacing: em(1.4, 14);
-        text-transform: uppercase;
-        @media (any-hover: hover) {
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
     &__wrapper {
@@ -206,7 +186,6 @@
 
 // Discount
 .discount {
-    @include adaptiveValue("margin-top", 60, 35);
     background-color: var(--bg-secondary);
     &__container {
         display: flex;
@@ -278,5 +257,30 @@
             margin: 0;
             padding-bottom: 85%;
         }
+    }
+}
+
+// Posts
+.posts {
+    @include adaptiveValue("padding-top", 120, 70);
+    @include adaptiveValue("padding-bottom", 60, 35);
+    &__head {
+        margin-bottom: rem(30);
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(20);
+        }
+    }
+    &__items {
+        display: flex;
+        gap: rem(20);
+        @media (max-width: $mobile) {
+            max-width: rem(540);
+            margin: 0 auto;
+            flex-direction: column;
+            gap: rem(40);
+        }
+    }
+    &__item {
+        flex: 0 1 33.333%;
     }
 }

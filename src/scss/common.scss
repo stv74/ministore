@@ -21,6 +21,32 @@
     }
 }
 
+// The header of sections
+.head-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(30);
+    &__title {
+        @media (max-width: $mobileSmall) {
+            font-size: rem(25);
+        }
+    }
+    &__link {
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: em(1.4, 14);
+        text-transform: uppercase;
+        text-align: end;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 // Product card
 .product-item {
     &__img {
@@ -36,10 +62,10 @@
         align-items: center;
     }
     &__title {
+        transition: color 0.3s;
         @media (any-hover: hover) {
             &:hover {
                 color: var(--secondary);
-                transition: color 0.3s;
             }
         }
     }
@@ -70,6 +96,34 @@
         &:hover &__button {
             opacity: 1;
             transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// Post cards
+.post-item {
+    &__img {
+        margin-bottom: rem(14);
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        color: var(--text-secondary);
+        font-family: Jost;
+        font-size: rem(13);
+        line-height: 1.45;
+        letter-spacing: em(0.78, 13);
+        text-transform: uppercase;
+        margin-bottom: em(6, 13);
+    }
+    &__title {
+        @include adaptiveValue("font-size", 20, 16, 1, 1300, 767.98);
+        transition: color 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
         }
     }
 }
