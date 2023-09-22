@@ -9,6 +9,10 @@
     }
     &__posts {
     }
+    &__reviews {
+    }
+    &__subscribe {
+    }
 }
 
 // Promo
@@ -282,5 +286,159 @@
     }
     &__item {
         flex: 0 1 33.333%;
+    }
+}
+
+// Reviews
+.reviews {
+    @include adaptiveValue("padding-top", 60, 35);
+    @include adaptiveValue("padding-bottom", 120, 70);
+    &__container {
+    }
+    &__slider {
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 45px;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 22.32px;
+            height: 45px;
+            color: var(--secondary);
+            @media (max-width: em(480)) {
+                display: none;
+            }
+        }
+
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled {
+            opacity: 1;
+            color: var(--text-icons);
+        }
+    }
+}
+
+.slide-review {
+    padding: 0 120px;
+    @media (max-width: $mobile) {
+        padding: 0 80px;
+    }
+    @media (max-width: $mobileSmall) {
+        padding: 0;
+    }
+    &__icon {
+        text-align: center;
+        svg {
+            width: rem(91);
+            height: rem(65);
+            fill: var(--bg-secondary);
+            @media (max-width: $mobileSmall) {
+                width: rem(81);
+                height: rem(55);
+            }
+        }
+    }
+    &__text {
+        color: var(--text-primary);
+        text-align: center;
+        @include adaptiveValue("font-size", 34, 20);
+        font-weight: 300;
+        line-height: 1.38;
+        letter-spacing: em(0.68, 34);
+        margin-bottom: em(30, 34);
+    }
+    &__rating {
+        display: flex;
+        justify-content: center;
+        gap: rem(7);
+        margin-bottom: rem(8);
+        svg {
+            width: rem(17);
+            height: rem(17);
+            fill: var(--secondary);
+        }
+    }
+    &__name {
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: em(1.4, 14);
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+// Subscribe
+.subscribe {
+    &__container {
+        padding: 80px 15px;
+        background-color: var(--primary);
+        @media (max-width: em(580)) {
+            padding: 50px 15px;
+        }
+    }
+    &__body {
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveValue("gap", 126, 30, 0, 1300, 767.98);
+        @media (max-width: em(580)) {
+            flex-direction: column;
+            row-gap: rem(30);
+            max-width: 80%;
+        }
+    }
+    &__content {
+        flex: 0 1 50%;
+    }
+    &__title {
+        color: var(--bg-primary);
+        &:not(:last-child) {
+            margin-bottom: em(10, 30);
+        }
+    }
+    &__descr {
+        color: var(--bg-primary);
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 1.38;
+        letter-spacing: em(0.48, 16);
+    }
+    &__form {
+        display: flex;
+        flex: 0 1 50%;
+        border: 1px solid #eee;
+        box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            border: none;
+        }
+        @media (max-width: em(580)) {
+            width: 100%;
+        }
+        input {
+            height: rem(53);
+            border: none;
+            padding: em(10, 16) em(10, 16) em(10, 16) em(30, 16);
+            color: var(--text-primary);
+            font-weight: 300;
+            line-height: 1.38;
+            letter-spacing: em(0.48, 16);
+            @media (max-width: $tablet) {
+                padding: em(10, 16);
+            }
+            @media (max-width: $mobile) {
+                margin-bottom: rem(10);
+            }
+        }
+        input,
+        button {
+            @media (max-width: $mobile) {
+                border: 1px solid #eee;
+                box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
+            }
+        }
     }
 }

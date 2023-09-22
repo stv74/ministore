@@ -49,14 +49,12 @@ function initSliders() {
             //preloadImages: false,
             //lazy: true,
 
-            /*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+            // Ефекти
+            // effect: "fade",
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
 
             // Пагінація
             /*
@@ -106,12 +104,7 @@ function initSliders() {
         });
     }
     if (document.querySelector(".products__slider")) {
-        // Вказуємо склас потрібного слайдера
-        // Створюємо слайдер
         new Swiper(".products__slider", {
-            // Вказуємо склас потрібного слайдера
-            // Підключаємо модулі слайдера
-            // для конкретного випадку
             modules: [Pagination],
             observer: true,
             observeParents: true,
@@ -119,66 +112,39 @@ function initSliders() {
             spaceBetween: 20,
             autoHeight: true,
             speed: 800,
-
-            //touchRatio: 0,
-            //simulateTouch: false,
-            //loop: true,
-            //preloadImages: false,
-            //lazy: true,
-
-            /*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-            // Пагінація
-
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-
-            // Скроллбар
-            /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-            // Кнопки "вліво/вправо"
-            // navigation: {
-            //     prevEl: ".swiper-button-prev",
-            //     nextEl: ".swiper-button-next",
-            // },
-            
-			// Брейкпоінти
-			breakpoints: {
+            breakpoints: {
                 300: {
                     slidesPerView: 1,
-					// spaceBetween: 20,
                 },
-				480: {
-					slidesPerView: 2,
-					// spaceBetween: 20,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 3,
-					// spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 4,
-					// spaceBetween: 20,
-				},
-			},
-			
-            // Події
-            on: {},
+                480: {
+                    slidesPerView: 2,
+                    autoHeight: true,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    }
+    if (document.querySelector(".reviews__slider")) {
+        new Swiper(".reviews__slider", {
+            modules: [Navigation, Autoplay],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            autoHeight: true,
+            speed: 800,
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            },
         });
     }
 }
