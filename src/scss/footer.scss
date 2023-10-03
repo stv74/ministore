@@ -1,3 +1,183 @@
-//====================================================================================================
+.footer {
+    @include adaptiveValue("padding-top", 50, 30);
+    padding-bottom: 25px;
+    color: var(--text-primary);
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: 1.38;
+    letter-spacing: em(0.48, 16);
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue("padding-bottom", 80, 40);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            row-gap: rem(40);
+        }
+        @media (max-width: $mobile) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+            column-gap: rem(80);
+        }
+    }
+    &__about {
+        flex: 0 1 25%;
+        @media (max-width: $mobile) {
+            flex: 0 1 auto;
+        }
+    }
+    &__logo {
+        width: rem(140);
+        margin-bottom: em(21, 16);
+        img {
+            max-width: 100%;
+        }
+    }
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: em(20, 16);
+        }
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        @media (max-width: $tablet) {
+            gap: rem(20);
+        }
+        a {
+            display: flex;
+            align-items: center;
+            svg {
+                width: rem(20);
+                height: rem(20);
+                fill: var(--text-icons);
+                transition: fill 0.3s ease 0s;
+            }
+            @media (any-hover: hover) {
+                &:hover svg {
+                    fill: var(--secondary);
+                }
+            }
+        }
+    }
+    &__contacts {
+        flex: 0 1 20%;
+        @media (max-width: $tablet) {
+            flex: 0 1 auto;
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: em(14, 14);
+            }
+        }
+        a {
+            font-weight: 400;
+            text-decoration-line: underline;
+            white-space: nowrap;
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+    }
+}
+.menu-footer {
+    &__title {
+        margin-bottom: em(10, 20);
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: em(8, 16);
+        }
+    }
+    &__link {
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: em(1.4, 14);
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+    }
+}
 
-//====================================================================================================
+.bottom-footer {
+    border-top: 1px solid #d0d0d0;
+    padding-top: 20px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(20);
+        @media (max-width: em(580)) {
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(15);
+        }
+    }
+    &__wrap {
+        display: flex;
+        gap: rem(46);
+        @media (max-width: $pc) {
+            gap: rem(25);
+        }
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            row-gap: rem(10);
+        }
+    }
+    &__ship {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        svg {
+            width: rem(60);
+            height: rem(24);
+            fill: var(--text-icons);
+            &:last-child {
+                fill: none;
+                stroke: var(--text-icons);
+            }
+        }
+    }
+    &__pay {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        svg {
+            width: rem(30);
+            height: rem(24);
+            fill: var(--text-icons);
+        }
+    }
+    &__copy {
+        a {
+            font-weight: 400;
+            text-decoration: underline;
+
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            flex: 0 1 50%;
+            text-align: right;
+        }
+        @media (max-width: em(580)) {
+            text-align: left;
+        }
+    }
+}
