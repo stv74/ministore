@@ -40,7 +40,7 @@
             </nav>
         </div>
         <div data-da=".menu__body,479,98" class="header__buttons">
-            <button class="header__button">
+            <button class="header__button button-search">
                 <svg>
                     <use xlink:href="@img/icons/icons.svg#search"></use>
                 </svg>
@@ -60,5 +60,47 @@
         <button type="button" class="menu__icon icon-menu">
             <span></span>
         </button>
+        <div class="header__search search">
+            <button class="search__close"></button>
+            <div class="search__body">
+                <form action="#" class="search__form">
+                    <input
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        data-error="Error"
+                        placeholder="Type and press Enter"
+                        class="input"
+                    />
+                    <button type="submit" class="search__button">
+                        <svg>
+                            <use xlink:href="@img/icons/icons.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="search__links category-links">
+                    <div class="category-links__title">Browse categories</div>
+                    <div class="category-links__wrapp">
+                        <a href="#" class="category-links__link"
+                            >Mobile Phone</a
+                        >
+                        /
+                        <a href="#" class="category-links__link"
+                            >Smart Watches</a
+                        >
+                        /
+                        <a href="#" class="category-links__link">Headphones</a>
+                        /
+                        <a href="#" class="category-links__link">Accessories</a>
+                        /
+                        <a href="#" class="category-links__link">Monitors</a> /
+                        <a href="#" class="category-links__link">Speacers</a> /
+                        <a href="#" class="category-links__link"
+                            >Memory Cards</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
