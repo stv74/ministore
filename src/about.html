@@ -1,15 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__head head-page">
+                    <div class="head-page__container">
+                        <h1 class="head-page__title title">About us</h1>
+                        <div class="head-page__breadcrumbs breadcrumbs">
+                            <a href="home.html">Home</a>
+                            <span>&gt;</span>
+                            About Us
+                        </div>
+                    </div>
+                </section>
+                <section class="page__advantages advantages">
+                    <div class="advantages__container">
+                        <div class="advantages__item item-advantage">
+                            <div class="item-advantage__icon">
+                                <svg>
+                                    <use
+                                        xlink:href="@img/icons/icons.svg#delivery"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="item-advantage__body">
+                                <div
+                                    class="item-advantage__title title title_s"
+                                >
+                                    Free delivery
+                                </div>
+                                <div class="item-advantage__text">
+                                    Consectetur adipi elit lorem ipsum dolor sit
+                                    amet.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__item item-advantage">
+                            <div class="item-advantage__icon">
+                                <svg>
+                                    <use
+                                        xlink:href="@img/icons/icons.svg#guarantee"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="item-advantage__body">
+                                <div
+                                    class="item-advantage__title title title_s"
+                                >
+                                    Quality guarantee
+                                </div>
+                                <div class="item-advantage__text">
+                                    Dolor sit amet orem ipsu mcons ectetur adipi
+                                    elit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__item item-advantage">
+                            <div class="item-advantage__icon">
+                                <svg>
+                                    <use
+                                        xlink:href="@img/icons/icons.svg#offers"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="item-advantage__body">
+                                <div
+                                    class="item-advantage__title title title_s"
+                                >
+                                    Daily offers
+                                </div>
+                                <div class="item-advantage__text">
+                                    Amet consectetur adipi elit loreme ipsum
+                                    dolor sit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__item item-advantage">
+                            <div class="item-advantage__icon">
+                                <svg>
+                                    <use
+                                        xlink:href="@img/icons/icons.svg#secure"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <div class="item-advantage__body">
+                                <div
+                                    class="item-advantage__title title title_s"
+                                >
+                                    100% secure payment
+                                </div>
+                                <div class="item-advantage__text">
+                                    Rem Lopsum dolor sit amet, consectetur adipi
+                                    elit.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__aboutus aboutus">
+                    <div class="aboutus__container">
+                        <div class="aboutus__img">
+                            <img src="@img/about/AboutUs.jpg" alt="About Us" />
+                        </div>
+                        <div class="aboutus__content">
+                            <h2 class="aboutus__title title title_m">
+                                How was Ministore Found?
+                            </h2>
+                            <p>
+                                Risus augue curabitur diam senectus congue velit
+                                et. Sed vitae metus nibh sit era. Nulla
+                                adipiscing pharetra pellentesque maecenas odio
+                                eros at. Et libero vulputate amet duis erat
+                                volutpat vitae eget. Sed vitae metus nibh sit
+                                era. Nulla adipiscing pharetra pellentesque
+                                maecenas odio eros at. Quam libero etiam et in
+                                ac at quis. Sed vitae metus nibh sit era. Nulla
+                                adipiscing pharetra pellentesque maecenas odio
+                                eros at. Et libero vulputate amet duis erat
+                                volutpat vitae eget. Quam libero etiam et in ac
+                                at quis. Risus augue curabitur diam senectus
+                                congue velit et.
+                            </p>
+                            <a href="" class="aboutus__button button"
+                                >Shop Our store</a
+                            >
+                        </div>
+                    </div>
+                </section>
+                <section class="page__reviews reviews">
+                    <div class="reviews__container">
+                        <div class="reviews__slider swiper">
+                            <div class="reviews__wrapper swiper-wrapper">
+                                <div
+                                    class="reviews__slide slide-review swiper-slide"
+                                >
+                                    <div class="slide-review__icon">
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#quotes"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slide-review__text">
+                                        “Tempus oncu enim pellen tesque este
+                                        pretium in neque, elit morbi sagittis
+                                        lorem habi mattis Pellen tesque pretium
+                                        feugiat vel morbi suspen dise sagittis
+                                        lorem habi tasse morbi.”
+                                    </div>
+                                    <div class="slide-review__rating">
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slide-review__name">
+                                        Emma Chamberlin
+                                    </div>
+                                </div>
+                                <div
+                                    class="reviews__slide slide-review swiper-slide"
+                                >
+                                    <div class="slide-review__icon">
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#quotes"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slide-review__text">
+                                        “Tempus oncu enim pellen tesque este
+                                        pretium in neque, elit morbi sagittis
+                                        lorem habi mattis Pellen tesque pretium
+                                        feugiat vel morbi suspen dise sagittis
+                                        lorem habi tasse morbi. Tempus oncu enim
+                                        pellen tesque pretium in neque”
+                                    </div>
+                                    <div class="slide-review__rating">
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                        <svg>
+                                            <use
+                                                xlink:href="@img/icons/icons.svg#star"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slide-review__name">
+                                        Ken Watson
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="swiper-button-prev"
+                            ></button>
+                            <button
+                                type="button"
+                                class="swiper-button-next"
+                            ></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__subscribe subscribe">
+                    <div class="subscribe__container">
+                        <div class="subscribe__body">
+                            <div class="subscribe__content">
+                                <h2 class="subscribe__title title title_m">
+                                    Subscribe Us now
+                                </h2>
+                                <div class="subscribe__descr">
+                                    Get latest news, updates and deals directly
+                                    mailed to your inbox.
+                                </div>
+                            </div>
+                            <form action="#" class="subscribe__form">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Your email address here"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button_subscribe"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__insta insta">
+                    <div class="insta__container">
+                        <h2 class="insta__title title title_m">
+                            Shop our insta
+                        </h2>
+                        <div class="insta__items">
+                            <div class="insta__item-ibg">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_1.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_2.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_3.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_4.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_5.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>
