@@ -1,15 +1,580 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__head head-page">
+                    <div class="head-page__container">
+                        <h1 class="head-page__title title">Shop</h1>
+                        <div class="head-page__breadcrumbs breadcrumbs">
+                            <a href="home.html">Home</a>
+                            <span>&gt;</span>
+                            Shop
+                        </div>
+                    </div>
+                </section>
+                <section class="page__shop shop">
+                    <div class="shop__container">
+                        <div class="shop__body">
+                            <div class="shop__head head-shop">
+                                <div class="head-shop__amount">
+                                    Showing 1–9 of 55 results
+                                </div>
+                                <select name="form[]" data-class-modif="form">
+                                    <option value="1" selected>
+                                        Default sorting
+                                    </option>
+                                    <option value="2">Name (A - Z)</option>
+                                    <option value="3">Name (Z - A)</option>
+                                    <option value="4">
+                                        Price (Low - High)
+                                    </option>
+                                    <option value="5">
+                                        Price (High - Low)
+                                    </option>
+                                    <option value="6">
+                                        Price (High - Low)
+                                    </option>
+                                    <option value="7">Popular sorting</option>
+                                </select>
+                            </div>
+                            <div class="shop__list">
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone10.jpg"
+                                            alt="iPhone 10"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 10
+                                        </a>
+                                        <div class="product-item__price">
+                                            $980
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone11.jpg"
+                                            alt="iPhone 11"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 11
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1100
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone8.jpg"
+                                            alt="iPhone 8"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 8
+                                        </a>
+                                        <div class="product-item__price">
+                                            $780
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/sw_1.jpg"
+                                            alt="Pink watch"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Pink watch
+                                        </a>
+                                        <div class="product-item__price">
+                                            $870
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/sw_2.jpg"
+                                            alt="Heavy watch"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Heavy watch
+                                        </a>
+                                        <div class="product-item__price">
+                                            $680
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/sw_3.jpg"
+                                            alt="Spotted watch"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Spotted watch
+                                        </a>
+                                        <div class="product-item__price">
+                                            $750
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/sw_4.jpg"
+                                            alt="Black watch"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Black watch
+                                        </a>
+                                        <div class="product-item__price">
+                                            $650
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/sw_5.jpg"
+                                            alt="Apple watch"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Apple watch
+                                        </a>
+                                        <div class="product-item__price">
+                                            $710
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone13.jpg"
+                                            alt="iPhone13"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 13
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1500
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__pagination pagination">
+                                <button class="pagination__button disabled">
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#arrow-sl"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="pagination__link active"
+                                    >1</a
+                                >
+                                <a href="#" class="pagination__link">2</a>
+                                <a href="#" class="pagination__link">3</a>
+                                <button class="pagination__button">
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#arrow-sr"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <aside class="shop__sidebar sidebar">
+                            <form
+                                action="#"
+                                class="sidebar__search search-form"
+                            >
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Search"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="search-form__button"
+                                >
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#search"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Categories
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a
+                                            href="#"
+                                            class="block-links__link active"
+                                            >All</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Phones</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Accessories</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Tablets</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Watches</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Tags
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >White</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Cheap</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Mobile</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Modern</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Brands
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Apple</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Samsung</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Green</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Filter by price
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Less than $10</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >$10- $20</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >$20- $30</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >$30- $40</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >$40- $50</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+                <section class="page__subscribe subscribe">
+                    <div class="subscribe__container">
+                        <div class="subscribe__body">
+                            <div class="subscribe__content">
+                                <h2 class="subscribe__title title title_m">
+                                    Subscribe Us now
+                                </h2>
+                                <div class="subscribe__descr">
+                                    Get latest news, updates and deals directly
+                                    mailed to your inbox.
+                                </div>
+                            </div>
+                            <form action="#" class="subscribe__form">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Your email address here"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button_subscribe"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__insta insta">
+                    <div class="insta__container">
+                        <h2 class="insta__title title title_m">
+                            Shop our insta
+                        </h2>
+                        <div class="insta__items">
+                            <div class="insta__item-ibg">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_1.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_2.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_3.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_4.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_5.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>

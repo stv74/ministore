@@ -1,0 +1,93 @@
+.shop {
+    @include adaptiveValue("padding-top", 120, 70);
+    @include adaptiveValue("padding-bottom", 120, 70);
+    color: var(--text-primary);
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: em(0.48, 16);
+    &__container {
+        display: grid;
+        grid-template-columns: minmax(650px, 970px) minmax(260px, 290px);
+        column-gap: 40px;
+        @media (max-width: $tablet) {
+            grid-template-columns: auto 250px;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: auto;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(20);
+        row-gap: rem(40);
+        margin-bottom: rem(60);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__pagination {
+        @media (max-width: $mobile) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.head-shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20);
+    margin-bottom: rem(20);
+}
+
+.sidebar {
+    @media (max-width: $mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: rem(40);
+        row-gap: rem(20);
+    }
+    &__search {
+        @media (max-width: $mobile) {
+            flex: 0 1 100%;
+        }
+    }
+    &__links {
+        &:not(:last-child) {
+            margin-bottom: em(40, 16);
+            @media (max-width: $mobile) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.block-links {
+    &__title {
+        text-decoration: underline;
+        &:not(:last-child) {
+            margin-bottom: em(10, 20);
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: em(8, 16);
+        }
+    }
+    &__link {
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+        &.active {
+            color: var(--secondary);
+        }
+    }
+}
