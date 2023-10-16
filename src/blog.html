@@ -1,15 +1,446 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__head head-page">
+                    <div class="head-page__container">
+                        <h1 class="head-page__title title">Blog</h1>
+                        <div class="head-page__breadcrumbs breadcrumbs">
+                            <a href="home.html">Home</a>
+                            <span>&gt;</span>
+                            Blog
+                        </div>
+                    </div>
+                </section>
+                <section class="page__catalog catalog">
+                    <div class="catalog__container catalog__container_l">
+                        <aside class="catalog__sidebar sidebar">
+                            <form
+                                action="#"
+                                class="sidebar__search search-form"
+                            >
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Search"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="search-form__button"
+                                >
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#search"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </form>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Categories
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a
+                                            href="#"
+                                            class="block-links__link active"
+                                            >All</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Phones</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Accessories</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Tablets</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Watches</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Tags
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >White</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Cheap</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Mobile</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Modern</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__links block-links">
+                                <div class="block-links__title title title_s">
+                                    Social links
+                                </div>
+                                <ul class="block-links__list">
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Facebook</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Instagram</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Twitter</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >You Tube</a
+                                        >
+                                    </li>
+                                    <li class="block-links__item">
+                                        <a href="#" class="block-links__link"
+                                            >Pinterest</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="catalog__body">
+                            <div class="catalog__list">
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_1.jpg"
+                                                alt="Post 1"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - Gadgets
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Get some cool gadgets in 2023
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_2.jpg"
+                                                alt="Post 2"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - technology
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Technology hack you won’t get
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_3.jpg"
+                                                alt="Post 3"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - camera
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Top 10 small camera in the world
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_4.jpg"
+                                                alt="Post 4"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - Gadgets
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Get some cool gadgets in 2023
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_5.jpg"
+                                                alt="Post 5"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - technology
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Technology hack you won’t get
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_6.jpg"
+                                                alt="Post 6"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - camera
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Top 10 small camera in the world
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_7.jpg"
+                                                alt="Post 7"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - Gadgets
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Get some cool gadgets in 2023
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_8.jpg"
+                                                alt="Post 8"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - technology
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Technology hack you won’t get
+                                    </a>
+                                </div>
+                                <div class="catalog__item post-item">
+                                    <div class="post-item__img">
+                                        <a href="#">
+                                            <img
+                                                src="@img/posts/image_9.jpg"
+                                                alt="Post 9"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="post-item__info">
+                                        feb 22, 2023 - camera
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="post-item__title title title_s"
+                                    >
+                                        Top 10 small camera in the world
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog__pagination pagination">
+                                <button class="pagination__button disabled">
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#arrow-sl"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <a href="#" class="pagination__link active"
+                                    >1</a
+                                >
+                                <a href="#" class="pagination__link">2</a>
+                                <a href="#" class="pagination__link">3</a>
+                                <button class="pagination__button">
+                                    <svg>
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#arrow-sr"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__subscribe subscribe">
+                    <div class="subscribe__container">
+                        <div class="subscribe__body">
+                            <div class="subscribe__content">
+                                <h2 class="subscribe__title title title_m">
+                                    Subscribe Us now
+                                </h2>
+                                <div class="subscribe__descr">
+                                    Get latest news, updates and deals directly
+                                    mailed to your inbox.
+                                </div>
+                            </div>
+                            <form action="#" class="subscribe__form">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Your email address here"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button_subscribe"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__insta insta">
+                    <div class="insta__container">
+                        <h2 class="insta__title title title_m">
+                            Shop our insta
+                        </h2>
+                        <div class="insta__items">
+                            <div class="insta__item-ibg">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_1.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_2.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_3.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_4.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_5.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>
