@@ -1,0 +1,110 @@
+.page {
+    &__contacts {
+    }
+    &__shops {
+    }
+}
+// Section Contacts
+.contacts {
+    @include adaptiveValue("padding-top", 120, 50);
+    @include adaptiveValue("padding-bottom", 60, 25);
+    &__container {
+        display: flex;
+        gap: 20px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+    &__info {
+        flex: 1 1 50%;
+    }
+    &__feedback {
+        flex: 1 1 50%;
+    }
+    &__head {
+        margin-bottom: rem(30);
+    }
+    &__form {
+    }
+}
+.info-contacts {
+    &__head {
+        margin-bottom: rem(30);
+    }
+    &__body {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    &__item {
+        p {
+            font-weight: 400;
+            &:not(:last-child) {
+                margin-bottom: em(10, 16);
+            }
+        }
+    }
+    &__title {
+        text-decoration: underline;
+        margin-bottom: em(15, 20);
+    }
+}
+.head-contacts {
+    &__title {
+        margin-bottom: em(10, 30);
+    }
+}
+.form-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    &__wrap {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    &__input {
+    }
+    &__button {
+    }
+}
+
+.input {
+}
+.button {
+}
+
+// Section Shops
+.shops {
+    @include adaptiveValue("padding-top", 60, 25);
+    @include adaptiveValue("padding-bottom", 120, 50);
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            gap: 40px;
+        }
+    }
+    &__img {
+        flex: 1 1 50%;
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        flex: 1 1 50%;
+    }
+}
