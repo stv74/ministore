@@ -12,8 +12,10 @@
     letter-spacing: em(1.4, 14);
     text-transform: uppercase;
     background-color: var(--primary);
+    transition: background-color 0.3s;
     @media (any-hover: hover) {
         &:hover {
+            background-color: var(--secondary);
         }
     }
     &--fw {
@@ -31,12 +33,12 @@
             height: rem(16);
             fill: var(--bg-primary);
         }
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--secondary);
-                transition: background-color 0.3s;
-            }
-        }
+        // @media (any-hover: hover) {
+        //     &:hover {
+        //         background-color: var(--secondary);
+        //         transition: background-color 0.3s;
+        //     }
+        // }
         .touch & {
             display: flex;
             justify-content: center;
@@ -61,6 +63,14 @@
         }
         @media (max-width: $tablet) {
             padding: em(16, 14) em(30, 14);
+        }
+    }
+    &_buy {
+        background-color: var(--secondary);
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--primary);
+            }
         }
     }
 }

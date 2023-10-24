@@ -1,15 +1,724 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="page__product product">
+                    <div class="product__container">
+                        <div class="product__img">
+                            <img
+                                src="@img/products/product_1.jpg"
+                                alt="Pinc Watch"
+                            />
+                        </div>
+                        <div class="product__about about-product">
+                            <h1 class="about-product__title title title_m">
+                                Pink Watch
+                            </h1>
+                            <div class="about-product__rating">
+                                <svg>
+                                    <use
+                                        xlink:href="@img/icons/icons.svg#star"
+                                    ></use>
+                                </svg>
+                                5.0
+                            </div>
+                            <div class="about-product__price">$870.00</div>
+                            <div class="about-product__descr">
+                                Justo, cum feugiat imperdiet nulla molestie ac
+                                vulputate scelerisque amet. Bibendum adipiscing
+                                platea blandit sit sed quam semper rhoncus. Diam
+                                ultrices maecenas consequat eu tortor orci, cras
+                                lectus mauris, cras egestas quam venenatis
+                                neque.
+                            </div>
+                            <div class="about-product__options options-item">
+                                <div class="options-item__title title title_s">
+                                    Color
+                                </div>
+                                <a href="#" class="options-item__link active"
+                                    >Orange</a
+                                >
+                                <a href="#" class="options-item__link">Green</a>
+                                <a href="#" class="options-item__link">Blue</a>
+                                <a href="#" class="options-item__link">Black</a>
+                            </div>
+                            <form
+                                action="#"
+                                method="post"
+                                class="about-product__quantity quantity-product"
+                            >
+                                <div class="quantity-product__title">
+                                    2 in stock
+                                </div>
+                                <div
+                                    data-quantity
+                                    class="quantity-product__quantity quantity"
+                                >
+                                    <button
+                                        data-quantity-plus
+                                        type="button"
+                                        class="quantity__button quantity__button_plus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                        <input
+                                            data-quantity-value
+                                            autocomplete="off"
+                                            type="text"
+                                            name="form[]"
+                                            value="1"
+                                        />
+                                    </div>
+                                    <button
+                                        data-quantity-minus
+                                        type="button"
+                                        class="quantity__button quantity__button_minus"
+                                    ></button>
+                                </div>
+                                <div class="quantity-product__buttons">
+                                    <button
+                                        type="submit"
+                                        class="button button_buy"
+                                    >
+                                        Buy now
+                                    </button>
+                                    <button type="submit" class="button">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="about-product__additional">
+                                <p>SKU: 1223</p>
+                                <div class="about-product__tax">
+                                    Category: Watch, Screen touch
+                                </div>
+                                <div class="about-product__tax">
+                                    Tags: Classic, Modern
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__product-info product-info">
+                    <div class="product-info__container">
+                        <div
+                            data-tabs="767.98"
+                            data-tabs-animate="500"
+                            class="product-info__tabs tabs-product"
+                        >
+                            <nav
+                                data-tabs-titles
+                                class="tabs-product__navigation"
+                            >
+                                <button
+                                    type="button"
+                                    class="tabs-product__title title title_m _tab-active"
+                                >
+                                    Description
+                                </button>
+                                <button
+                                    type="button"
+                                    class="tabs-product__title title title_m"
+                                >
+                                    Additional information
+                                </button>
+                                <button
+                                    type="button"
+                                    class="tabs-product__title title title_m"
+                                >
+                                    Reviews (2)
+                                </button>
+                            </nav>
+                            <div data-tabs-body class="tabs-product__content">
+                                <div class="tabs-product__body">
+                                    <p>Product Description</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Donec odio. Quisque
+                                        volutpat mattis eros. Nullam malesuada
+                                        erat ut turpis. Suspendisse urna viverra
+                                        non, semper suscipit, posuere a, pede.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Donec nec justo eget felis facilisis
+                                            fermentum.
+                                        </li>
+                                        <li>
+                                            Aliquam porttitor mauris sit amet
+                                            orci.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Aliquam porttitor mauris sit amet orci.
+                                        orci. Aenean dignissim pellentesque
+                                        felis. Phasellus ultrices nulla quis
+                                        nibh. Quisque a lectus. Donec
+                                        consectetuer ligula vulputate sem
+                                        tristique cursus. Donec nec justo eget
+                                        felis facilisis fermentum. Suspendisse
+                                        urna viverra non, semper suscipit pede.
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Donec odio. Quisque
+                                        volutpat mattis eros. Nullam malesuada
+                                        erat ut turpis. Suspendisse urna viverra
+                                        non, semper suscipit, posuere a, pede.
+                                        Donec nec justo eget felis facilisis
+                                        fermentum. Aliquam porttitor mauris sit
+                                        amet orci. Aenean dignissim pellentesque
+                                        felis. Phasellus ultrices nulla quis
+                                        nibh. Quisque a lectus. Donec
+                                        consectetuer ligula vulputate sem
+                                        tristique cursus. orci.
+                                    </p>
+                                </div>
+                                <div class="tabs-product__body">
+                                    <p>Product Description</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Donec odio. Quisque
+                                        volutpat mattis eros. Nullam malesuada
+                                        erat ut turpis. Suspendisse urna viverra
+                                        non, semper suscipit, posuere a, pede.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Donec nec justo eget felis facilisis
+                                            fermentum.
+                                        </li>
+                                        <li>
+                                            Aliquam porttitor mauris sit amet
+                                            orci.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Aliquam porttitor mauris sit amet orci.
+                                        orci. Aenean dignissim pellentesque
+                                        felis. Phasellus ultrices nulla quis
+                                        nibh. Quisque a lectus. Donec
+                                        consectetuer ligula vulputate sem
+                                        tristique cursus. Donec nec justo eget
+                                        felis facilisis fermentum. Suspendisse
+                                        urna viverra non, semper suscipit pede.
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Donec odio. Quisque
+                                        volutpat mattis eros. Nullam malesuada
+                                        erat ut turpis. Suspendisse urna viverra
+                                        non, semper suscipit, posuere a, pede.
+                                        Donec nec justo eget felis facilisis
+                                        fermentum. Aliquam porttitor mauris sit
+                                        amet orci. Aenean dignissim pellentesque
+                                        felis. Phasellus ultrices nulla quis
+                                        nibh. Quisque a lectus. Donec
+                                        consectetuer ligula vulputate sem
+                                        tristique cursus. orci.
+                                    </p>
+                                </div>
+                                <div class="tabs-product__body">
+                                    <div class="comments">
+                                        <div class="comments__body">
+                                            <div
+                                                class="comments__item item-comments"
+                                            >
+                                                <div class="item-comments__img">
+                                                    <img
+                                                        src="@img/customers/image_1.jpg"
+                                                        alt="Person"
+                                                    />
+                                                </div>
+                                                <div
+                                                    class="item-comments__body"
+                                                >
+                                                    <div
+                                                        class="item-comments__head"
+                                                    >
+                                                        <span>Sam smith</span
+                                                        >Jul 10
+                                                    </div>
+                                                    <div
+                                                        class="item-comments__text"
+                                                    >
+                                                        Mattis pulvinar non
+                                                        viverra donec
+                                                        pellentesque. Odio mi
+                                                        consequat libero dolor.
+                                                        Porta ut diam lobortis
+                                                        eget leo, lectus. Tortor
+                                                        diam dignissim amet, in
+                                                        interdum aliquet.
+                                                        Nascetur libero
+                                                        elementum adipiscing
+                                                        mauris maecenas et
+                                                        magna. Etiam nec, rutrum
+                                                        a diam lacus, nunc
+                                                        integer etiam.
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        class="item-comments__link"
+                                                        >Reply now</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="comments__item item-comments item-comments_reply"
+                                            >
+                                                <div class="item-comments__img">
+                                                    <img
+                                                        src="@img/customers/image_2.jpg"
+                                                        alt="Person"
+                                                    />
+                                                </div>
+                                                <div
+                                                    class="item-comments__body"
+                                                >
+                                                    <div
+                                                        class="item-comments__head"
+                                                    >
+                                                        <span>Santie Mary</span
+                                                        >Jul 10
+                                                    </div>
+                                                    <div
+                                                        class="item-comments__text"
+                                                    >
+                                                        Mattis pulvinar non
+                                                        viverra donec
+                                                        pellentesque. Odio mi
+                                                        consequat libero dolor.
+                                                        Porta ut diam lobortis
+                                                        eget leo, lectus. Tortor
+                                                        diam dignissim amet, in
+                                                        interdum aliquet.
+                                                        Nascetur libero
+                                                        elementum adipiscing
+                                                        mauris maecenas et
+                                                        magna. Etiam nec, rutrum
+                                                        a diam lacus, nunc
+                                                        integer etiam.
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        class="item-comments__link"
+                                                        >Reply now</a
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="comments__item item-comments"
+                                            >
+                                                <div class="item-comments__img">
+                                                    <img
+                                                        src="@img/customers/image_3.jpg"
+                                                        alt="Person"
+                                                    />
+                                                </div>
+                                                <div
+                                                    class="item-comments__body"
+                                                >
+                                                    <div
+                                                        class="item-comments__head"
+                                                    >
+                                                        <span>Analisa Nora</span
+                                                        >Jul 10
+                                                    </div>
+                                                    <div
+                                                        class="item-comments__text"
+                                                    >
+                                                        Mattis pulvinar non
+                                                        viverra donec
+                                                        pellentesque. Odio mi
+                                                        consequat libero dolor.
+                                                        Porta ut diam lobortis
+                                                        eget leo, lectus. Tortor
+                                                        diam dignissim amet, in
+                                                        interdum aliquet.
+                                                        Nascetur libero
+                                                        elementum adipiscing
+                                                        mauris maecenas et
+                                                        magna. Etiam nec, rutrum
+                                                        a diam lacus, nunc
+                                                        integer etiam.
+                                                    </div>
+                                                    <a
+                                                        href="#"
+                                                        class="item-comments__link"
+                                                        >Reply now</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="comments__form form-comments"
+                                        >
+                                            <div
+                                                class="form-comments__title title title_m"
+                                            >
+                                                Leave a review
+                                            </div>
+                                            <div class="form-comments__descr">
+                                                Your email address will not be
+                                                published. Required fields are
+                                                marked *
+                                            </div>
+                                            <form action="#">
+                                                <div
+                                                    class="form-comments__wrap"
+                                                >
+                                                    <input
+                                                        autocomplete="off"
+                                                        type="text"
+                                                        name="form[]"
+                                                        data-error="Error"
+                                                        placeholder="Write your name here *"
+                                                        class="input"
+                                                    />
+                                                    <input
+                                                        autocomplete="off"
+                                                        type="text"
+                                                        name="form[]"
+                                                        data-error="Error"
+                                                        placeholder="Write your email here *"
+                                                        class="input"
+                                                    />
+                                                </div>
+                                                <textarea
+                                                    name=""
+                                                    id=""
+                                                    cols="30"
+                                                    rows="8"
+                                                    class="input"
+                                                >
+Write your comment here *</textarea
+                                                >
+                                                <button
+                                                    type="submit"
+                                                    class="form-comments__button button"
+                                                >
+                                                    Send review
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__products products">
+                    <div class="products__container">
+                        <div class="products__head head-section">
+                            <h2 class="head-section__title title title_m">
+                                Related Products
+                            </h2>
+                            <a href="#" class="head-section__link"
+                                >Go to Shop</a
+                            >
+                        </div>
+                        <div class="products__slider swiper">
+                            <div class="products__wrapper swiper-wrapper">
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone10.jpg"
+                                            alt="iPhone 10"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 10
+                                        </a>
+                                        <div class="product-item__price">
+                                            $980
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone11.jpg"
+                                            alt="iPhone 11"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 11
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1100
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone8.jpg"
+                                            alt="iPhone 8"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 8
+                                        </a>
+                                        <div class="product-item__price">
+                                            $780
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone13.jpg"
+                                            alt="iPhone 13"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 13
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1500
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone12Pro.jpg"
+                                            alt="iPhone 12 Pro"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 12 Pro
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1500
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="products__slide product-item swiper-slide"
+                                >
+                                    <div class="product-item__img">
+                                        <img
+                                            src="@img/products/iPhone14Pro.jpg"
+                                            alt="iPhone 14 Pro"
+                                        />
+                                        <button
+                                            class="product-item__button button button_card"
+                                        >
+                                            <span>Add to cart</span>
+                                            <svg>
+                                                <use
+                                                    xlink:href="@img/icons/icons.svg#cart"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="product-item__wrapper">
+                                        <a
+                                            href="#"
+                                            class="product-item__title title title_s"
+                                        >
+                                            Iphone 14 Pro
+                                        </a>
+                                        <div class="product-item__price">
+                                            $1500
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="products__pagination swiper-pagination"
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__subscribe subscribe">
+                    <div class="subscribe__container">
+                        <div class="subscribe__body">
+                            <div class="subscribe__content">
+                                <h2 class="subscribe__title title title_m">
+                                    Subscribe Us now
+                                </h2>
+                                <div class="subscribe__descr">
+                                    Get latest news, updates and deals directly
+                                    mailed to your inbox.
+                                </div>
+                            </div>
+                            <form action="#" class="subscribe__form">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Your email address here"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button_subscribe"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__insta insta">
+                    <div class="insta__container">
+                        <h2 class="insta__title title title_m">
+                            Shop our insta
+                        </h2>
+                        <div class="insta__items">
+                            <div class="insta__item-ibg">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_1.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_2.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_3.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_4.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_5.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>
