@@ -218,18 +218,17 @@
 // Comments
 .comments {
     &__body {
-        margin-bottom: 40px;
+        margin-bottom: rem(40);
     }
-    &__item {
-    }
-    &__form {
+    &__title {
+        margin-bottom: em(30, 30);
     }
 }
 .item-comments {
     display: flex;
-    gap: 20px;
+    gap: rem(20);
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: rem(20);
     }
     @media (max-width: $mobile) {
         flex-direction: column;
@@ -248,13 +247,11 @@
             width: 100%;
         }
     }
-    &__body {
-    }
     &__head {
         margin-bottom: em(5, 16);
         span {
             color: var(--primary);
-            font-size: 14px;
+            font-size: rem(14);
             font-weight: 500;
             line-height: 1.48;
             letter-spacing: em(1.4, 14);

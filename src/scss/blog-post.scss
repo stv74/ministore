@@ -1,0 +1,117 @@
+.blog-post {
+    &__comments {
+        @include adaptiveValue("padding-bottom", 100, 50);
+    }
+    &__posts {
+        padding-top: 0;
+        @include adaptiveValue("padding-bottom", 120, 50);
+    }
+}
+.post {
+    @include adaptiveValue("padding-top", 192, 122);
+    @include adaptiveValue("padding-bottom", 100, 50);
+    &__subtitle {
+        color: var(--text-secondary);
+        font-family: Jost;
+        font-size: rem(13);
+        font-weight: 400;
+        letter-spacing: em(0.78, 13);
+        text-transform: uppercase;
+        margin-bottom: em(20, 13);
+    }
+    &__title {
+        margin-bottom: em(30, 30);
+    }
+    &__img {
+        margin-bottom: rem(30);
+        img {
+            width: 100%;
+        }
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(30);
+        font-weight: 400;
+        margin-bottom: rem(30);
+        @media (max-width: em(580)) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    &__categories {
+        a {
+            margin-right: rem(20);
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: em(30, 16);
+        }
+    }
+}
+.social-post {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        a {
+            svg {
+                width: rem(20);
+                height: rem(20);
+                fill: var(--text-icons);
+                transition: fill 0.3s ease 0s;
+            }
+            @media (any-hover: hover) {
+                &:hover svg {
+                    fill: var(--secondary);
+                }
+            }
+        }
+    }
+}
+.slider-post {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(40);
+    @media (max-width: em(580)) {
+        grid-template-columns: auto;
+        gap: rem(20);
+    }
+    &__link {
+        display: grid;
+        grid-template-columns: 22px auto;
+        align-items: center;
+        gap: rem(20);
+        transition: all 0.3s ease 0s;
+        svg {
+            width: rem(22);
+            height: rem(45);
+            fill: none;
+            stroke: var(--text-icons);
+            transition: all 0.3s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
+            &:hover svg {
+                stroke: var(--secondary);
+            }
+        }
+    }
+    &__next {
+        grid-template-columns: auto 22px;
+        text-align: right;
+    }
+}
