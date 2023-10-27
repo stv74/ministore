@@ -1,15 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"MiniStore"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+    @@include('html/_head.htm',{ "title":"MiniStore" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="cart-page">
+                <section class="cart-page__head head-page">
+                    <div class="head-page__container">
+                        <h1 class="head-page__title title">Cart</h1>
+                        <div class="head-page__breadcrumbs breadcrumbs">
+                            <a href="home.html">Home</a>
+                            <span>&gt;</span>
+                            Cart
+                        </div>
+                    </div>
+                </section>
+                <section class="cart-page__cart cart">
+                    <div class="cart__container">
+                        <div class="cart__head head-cart">
+                            <div
+                                class="head-cart__title head-cart__row_1 title title_s"
+                            >
+                                Product
+                            </div>
+                            <div
+                                class="head-cart__title head-cart__row_2 title title_s"
+                            >
+                                Quantity
+                            </div>
+                            <div
+                                class="head-cart__title head-cart__row_3 title title_s"
+                            >
+                                Subtotal
+                            </div>
+                        </div>
+                        <div class="cart__wrapp">
+                            <div class="cart__item item-cart">
+                                <div class="item-cart__product product-cart">
+                                    <div class="product-cart__img">
+                                        <img
+                                            src="@img/cart/image_1.jpg"
+                                            alt="Product 1"
+                                        />
+                                    </div>
+                                    <div class="product-cart__body">
+                                        <div
+                                            class="product-cart__name title title_s"
+                                        >
+                                            Iphone 13
+                                        </div>
+                                        <div class="product-cart__price">
+                                            $1500.00
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    data-quantity
+                                    class="item-cart__quantity quantity"
+                                >
+                                    <button
+                                        data-quantity-plus
+                                        type="button"
+                                        class="quantity__button quantity__button_plus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                        <input
+                                            data-quantity-value
+                                            autocomplete="off"
+                                            type="text"
+                                            name="form[]"
+                                            value="1"
+                                        />
+                                    </div>
+                                    <button
+                                        data-quantity-minus
+                                        type="button"
+                                        class="quantity__button quantity__button_minus"
+                                    ></button>
+                                </div>
+                                <div class="item-cart__price">$1500.00</div>
+                                <button class="item-cart__cancel">
+                                    &times;
+                                </button>
+                            </div>
+                            <div class="cart__item item-cart">
+                                <div class="item-cart__product product-cart">
+                                    <div class="product-cart__img">
+                                        <img
+                                            src="@img/cart/image_2.jpg"
+                                            alt="Product 2"
+                                        />
+                                    </div>
+                                    <div class="product-cart__body">
+                                        <div
+                                            class="product-cart__name title title_s"
+                                        >
+                                            Pink watch
+                                        </div>
+                                        <div class="product-cart__price">
+                                            $870.00
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    data-quantity
+                                    class="item-cart__quantity quantity"
+                                >
+                                    <button
+                                        data-quantity-plus
+                                        type="button"
+                                        class="quantity__button quantity__button_plus"
+                                    ></button>
+                                    <div class="quantity__input">
+                                        <input
+                                            data-quantity-value
+                                            autocomplete="off"
+                                            type="text"
+                                            name="form[]"
+                                            value="1"
+                                        />
+                                    </div>
+                                    <button
+                                        data-quantity-minus
+                                        type="button"
+                                        class="quantity__button quantity__button_minus"
+                                    ></button>
+                                </div>
+                                <div class="item-cart__price">$870.00</div>
+                                <button class="item-cart__cancel">
+                                    &times;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart__total total-cart">
+                            <div class="total-cart__title title title_m">
+                                Cart totals
+                            </div>
+                            <div class="total-cart__row">
+                                <div class="total-cart__text title title_s">
+                                    Subtotal
+                                </div>
+                                <div class="total-cart__price">$1500.00</div>
+                            </div>
+                            <div class="total-cart__row">
+                                <div class="total-cart__text title title_s">
+                                    Total
+                                </div>
+                                <div class="total-cart__price">$1500.00</div>
+                            </div>
+                        </div>
+                        <div class="cart__buttons">
+                            <button type="submit" class="button">
+                                Update cart
+                            </button>
+                            <button type="submit" class="button">
+                                Continue shopping
+                            </button>
+                            <button type="submit" class="button">
+                                Proceed to checkout
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__subscribe subscribe">
+                    <div class="subscribe__container">
+                        <div class="subscribe__body">
+                            <div class="subscribe__content">
+                                <h2 class="subscribe__title title title_m">
+                                    Subscribe Us now
+                                </h2>
+                                <div class="subscribe__descr">
+                                    Get latest news, updates and deals directly
+                                    mailed to your inbox.
+                                </div>
+                            </div>
+                            <form action="#" class="subscribe__form">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    data-error="Помилка"
+                                    placeholder="Your email address here"
+                                    class="input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button_subscribe"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__insta insta">
+                    <div class="insta__container">
+                        <h2 class="insta__title title title_m">
+                            Shop our insta
+                        </h2>
+                        <div class="insta__items">
+                            <div class="insta__item-ibg">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_1.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_2.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_3.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_4.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="insta__item-ibg item-insta">
+                                <a href="#"
+                                    ><img
+                                        src="@img/insta/image_5.jpg"
+                                        alt="The post in Instagramm"
+                                    />
+                                    <svg class="item-insta__icon">
+                                        <use
+                                            xlink:href="@img/icons/icons.svg#insta"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
 </html>
