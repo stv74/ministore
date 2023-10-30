@@ -1,0 +1,62 @@
+.checkout-page {
+    &__checkout {
+    }
+}
+.checkout {
+    @include adaptiveValue("padding-top", 120, 50);
+    @include adaptiveValue("padding-bottom", 120, 50);
+    &__container {
+    }
+    &__form {
+    }
+}
+.form-checkout {
+    &__info {
+        display: flex;
+        gap: rem(20);
+        margin-bottom: rem(120);
+        input {
+            margin-top: rem(10);
+        }
+    }
+    &__billing {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+    }
+    &__title {
+    }
+    &__additional {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+    }
+    &__options {
+        margin-bottom: rem(30);
+    }
+    &__total {
+        margin-bottom: rem(30);
+    }
+}
+.total-cart {
+    &__title {
+    }
+    &__row {
+    }
+    &__text {
+    }
+    &__price {
+    }
+}
+.options {
+    &__item {
+    }
+    &__input {
+    }
+    &__label {
+    }
+    &__text {
+    }
+}

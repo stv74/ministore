@@ -4,165 +4,240 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="cart-page">
-                <section class="cart-page__head head-page">
+            <main class="checkout-page">
+                <section class="checkout-page__head head-page">
                     <div class="head-page__container">
-                        <h1 class="head-page__title title">Cart</h1>
+                        <h1 class="head-page__title title">Checkout</h1>
                         <div class="head-page__breadcrumbs breadcrumbs">
                             <a href="home.html">Home</a>
                             <span>&gt;</span>
-                            Cart
+                            Checkout
                         </div>
                     </div>
                 </section>
-                <section class="cart-page__cart cart">
-                    <div class="cart__container">
-                        <div class="cart__head head-cart">
-                            <div
-                                class="head-cart__title head-cart__row_1 title title_s"
-                            >
-                                Product
-                            </div>
-                            <div
-                                class="head-cart__title head-cart__row_2 title title_s"
-                            >
-                                Quantity
-                            </div>
-                            <div
-                                class="head-cart__title head-cart__row_3 title title_s"
-                            >
-                                Subtotal
-                            </div>
-                        </div>
-                        <div class="cart__wrapp">
-                            <div class="cart__item item-cart">
-                                <div class="item-cart__product product-cart">
-                                    <div class="product-cart__img">
-                                        <img
-                                            src="@img/cart/image_1.jpg"
-                                            alt="Product 1"
-                                        />
+                <section class="checkout-page__checkout checkout">
+                    <div class="checkout__container">
+                        <form action="#" class="checkout__form form-checkout">
+                            <div class="form-checkout__info">
+                                <div class="form-checkout__billing">
+                                    <div
+                                        class="form-checkout__title title title_m"
+                                    >
+                                        Billing Details
                                     </div>
-                                    <div class="product-cart__body">
-                                        <div
-                                            class="product-cart__name title title_s"
-                                        >
-                                            Iphone 13
-                                        </div>
-                                        <div class="product-cart__price">
-                                            $1500.00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    data-quantity
-                                    class="item-cart__quantity quantity"
-                                >
-                                    <button
-                                        data-quantity-plus
-                                        type="button"
-                                        class="quantity__button quantity__button_plus"
-                                    ></button>
-                                    <div class="quantity__input">
+                                    <label>
+                                        First name
                                         <input
-                                            data-quantity-value
                                             autocomplete="off"
                                             type="text"
-                                            name="form[]"
-                                            value="1"
+                                            name="first_name"
+                                            placeholder=""
+                                            class="input"
                                         />
-                                    </div>
-                                    <button
-                                        data-quantity-minus
-                                        type="button"
-                                        class="quantity__button quantity__button_minus"
-                                    ></button>
-                                </div>
-                                <div class="item-cart__price">$1500.00</div>
-                                <button class="item-cart__cancel">
-                                    &times;
-                                </button>
-                            </div>
-                            <div class="cart__item item-cart">
-                                <div class="item-cart__product product-cart">
-                                    <div class="product-cart__img">
-                                        <img
-                                            src="@img/cart/image_2.jpg"
-                                            alt="Product 2"
-                                        />
-                                    </div>
-                                    <div class="product-cart__body">
-                                        <div
-                                            class="product-cart__name title title_s"
-                                        >
-                                            Pink watch
-                                        </div>
-                                        <div class="product-cart__price">
-                                            $870.00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    data-quantity
-                                    class="item-cart__quantity quantity"
-                                >
-                                    <button
-                                        data-quantity-plus
-                                        type="button"
-                                        class="quantity__button quantity__button_plus"
-                                    ></button>
-                                    <div class="quantity__input">
+                                    </label>
+                                    <label>
+                                        Last name
                                         <input
-                                            data-quantity-value
                                             autocomplete="off"
                                             type="text"
-                                            name="form[]"
-                                            value="1"
+                                            name="last_name"
+                                            placeholder=""
+                                            class="input"
                                         />
+                                    </label>
+                                    <label>
+                                        Company name (optional)
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="company_name"
+                                            placeholder=""
+                                            class="input"
+                                        />
+                                    </label>
+                                    <label>
+                                        Country / Region *
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="country"
+                                            placeholder="United States (US)"
+                                            class="input"
+                                        />
+                                    </label>
+                                    <fieldset>
+                                        <legend>Street address *</legend>
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="address_1"
+                                            placeholder="House number and street name"
+                                            class="input"
+                                        />
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="address_2"
+                                            placeholder="Appartments, suite, etc."
+                                            class="input"
+                                        />
+                                    </fieldset>
+                                    <label>
+                                        Town / City *
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="city"
+                                            placeholder=""
+                                            class="input"
+                                        />
+                                    </label>
+                                    <label>
+                                        State *
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="state"
+                                            placeholder="Florida"
+                                            class="input"
+                                        />
+                                    </label>
+                                    <label>
+                                        ZIP Code *
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="zip_code"
+                                            placeholder=""
+                                            class="input"
+                                        />
+                                    </label>
+                                    <label>
+                                        Phone *
+                                        <input
+                                            autocomplete="off"
+                                            type="tel"
+                                            name="phone"
+                                            placeholder=""
+                                            class="input"
+                                        />
+                                    </label>
+                                    <label>
+                                        Email address *
+                                        <input
+                                            autocomplete="off"
+                                            type="email"
+                                            name="email"
+                                            placeholder=""
+                                            class="input"
+                                        />
+                                    </label>
+                                </div>
+                                <div class="form-checkout__additional">
+                                    <div
+                                        class="form-checkout__title title title_m"
+                                    >
+                                        Additional Information
                                     </div>
-                                    <button
-                                        data-quantity-minus
-                                        type="button"
-                                        class="quantity__button quantity__button_minus"
-                                    ></button>
+                                    <label>
+                                        Order notes (optional)
+                                        <input
+                                            autocomplete="off"
+                                            type="text"
+                                            name="order_notes"
+                                            placeholder="Notes about your order. Like special notes for delivery."
+                                            class="input"
+                                        />
+                                    </label>
                                 </div>
-                                <div class="item-cart__price">$870.00</div>
-                                <button class="item-cart__cancel">
-                                    &times;
-                                </button>
                             </div>
-                        </div>
-                        <div class="cart__total total-cart">
-                            <div class="total-cart__title title title_m">
-                                Cart totals
-                            </div>
-                            <div class="total-cart__row">
-                                <div class="total-cart__text title title_s">
-                                    Subtotal
+                            <div class="form-checkout__total total-cart">
+                                <div class="total-cart__title title title_m">
+                                    Cart totals
                                 </div>
-                                <div class="total-cart__price">$1500.00</div>
-                            </div>
-                            <div class="total-cart__row">
-                                <div class="total-cart__text title title_s">
-                                    Total
+                                <div class="total-cart__row">
+                                    <div class="total-cart__text title title_s">
+                                        Subtotal
+                                    </div>
+                                    <div class="total-cart__price">
+                                        $1500.00
+                                    </div>
                                 </div>
-                                <div class="total-cart__price">$1500.00</div>
+                                <div class="total-cart__row">
+                                    <div class="total-cart__text title title_s">
+                                        Total
+                                    </div>
+                                    <div class="total-cart__price">
+                                        $1500.00
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="cart__buttons">
+                            <div class="form-checkout__options options">
+                                <div class="options__item">
+                                    <input
+                                        id="o_1"
+                                        class="options__input"
+                                        checked
+                                        type="radio"
+                                        value="1"
+                                        name="option"
+                                    />
+                                    <label for="o_1" class="options__label"
+                                        ><span class="options__text"
+                                            >Direct bank transfer</span
+                                        ></label
+                                    >
+                                </div>
+                                <div class="options__item">
+                                    <input
+                                        id="o_2"
+                                        class="options__input"
+                                        type="radio"
+                                        value="2"
+                                        name="option"
+                                    />
+                                    <label for="o_2" class="options__label"
+                                        ><span class="options__text"
+                                            >Check payments</span
+                                        ></label
+                                    >
+                                </div>
+                                <div class="options__item">
+                                    <input
+                                        id="o_3"
+                                        class="options__input"
+                                        type="radio"
+                                        value="3"
+                                        name="option"
+                                    />
+                                    <label for="o_3" class="options__label"
+                                        ><span class="options__text"
+                                            >Cash on delivery</span
+                                        ></label
+                                    >
+                                </div>
+                                <div class="options__item">
+                                    <input
+                                        id="o_4"
+                                        class="options__input"
+                                        type="radio"
+                                        value="4"
+                                        name="option"
+                                    />
+                                    <label for="o_4" class="options__label"
+                                        ><span class="options__text"
+                                            >PayPal</span
+                                        ></label
+                                    >
+                                </div>
+                            </div>
                             <button type="submit" class="button">
-                                Update cart
+                                Place an order
                             </button>
-                            <button type="submit" class="button">
-                                Continue shopping
-                            </button>
-                            <button type="submit" class="button">
-                                Proceed to checkout
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </section>
-                <section class="page__subscribe subscribe">
+                <section class="checkout-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -193,7 +268,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__insta insta">
+                <section class="checkout-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
