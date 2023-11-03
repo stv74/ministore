@@ -1,8 +1,19 @@
+// Hide element while making it readable for screen readers
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
 // Titles
 .title {
     color: var(--primary);
     font-family: Jost;
-    // font-size: rem(83);
     @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
     font-weight: 300;
     line-height: 1.14;
@@ -101,7 +112,7 @@
     &__price {
         color: var(--secondary);
         font-family: Lato;
-        font-size: 20px;
+        font-size: rem(20);
         font-weight: 400;
         line-height: 1.2;
         letter-spacing: em(0.6, 20);

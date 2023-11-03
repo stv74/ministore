@@ -27,11 +27,11 @@
     }
     &__buttons {
         display: flex;
-        column-gap: 19px;
+        column-gap: rem(19);
         position: relative;
         z-index: 2;
         @media (max-width: $mobileSmall) {
-            padding-top: 40px;
+            padding-top: rem(40);
             justify-content: space-evenly;
         }
     }
@@ -63,7 +63,7 @@
         display: flex;
         justify-content: flex-end;
         @include adaptiveValue("padding-right", 120, 40, 0, 1300, 768);
-        padding-left: 15px;
+        padding-left: rem(15);
         @media (max-width: $mobile) {
             position: fixed;
             top: 0;
@@ -75,9 +75,9 @@
             overflow: auto;
             transition: all 0.3s ease 0s;
             @include adaptiveValue("padding-top", 180, 120, 2, 768, 320);
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 30px;
+            padding-left: rem(15);
+            padding-right: rem(15);
+            padding-bottom: rem(30);
             background-color: var(--bg-primary);
             &::before {
                 content: "";
@@ -104,7 +104,7 @@
         @include adaptiveValue("column-gap", 44, 30, 0, 1300, 768);
         @media (max-width: $mobile) {
             flex-direction: column;
-            row-gap: 30px;
+            row-gap: rem(30);
         }
     }
     &__item {
@@ -131,18 +131,19 @@
             color: var(--secondary);
         }
         &.parent {
-            margin-right: 30px;
+            margin-right: rem(30);
         }
         @media (max-width: $mobile) {
             font-size: rem(32);
         }
     }
     &__icon {
-        margin-left: 30px;
-        margin-right: 10px;
+        margin-left: rem(30);
+        margin-right: rem(10);
     }
 }
 
+// The arrow in mobile menu
 .arrow {
     display: none;
     position: absolute;
@@ -177,7 +178,7 @@
     left: em(-5, 16);
     white-space: nowrap;
     border: 1px solid var(--text-icons);
-    border-radius: 5px;
+    border-radius: rem(5);
     padding: em(7, 16) 0;
     font-size: rem(16);
     transition: all 0.3s ease 0s;
@@ -205,8 +206,8 @@
         position: static;
         white-space: normal;
         border: none;
-        padding: 0 0 0 20px;
-        margin-top: 15px;
+        padding: 0 0 0 rem(20);
+        margin-top: rem(15);
         font-size: rem(24);
     }
 }
@@ -279,8 +280,8 @@
         position: absolute;
         width: rem(30);
         height: rem(30);
-        top: 20px;
-        right: 20px;
+        top: rem(20);
+        right: rem(20);
         @media (any-hover: none) {
             cursor: default;
         }
@@ -311,22 +312,22 @@
         justify-content: center;
         align-items: center;
         gap: rem(15);
-        border-radius: 30px;
-        padding-left: 20px;
+        border-radius: rem(30);
+        padding-left: rem(20);
         margin-bottom: rem(50);
         background-color: var(--bg-secondary);
     }
     &__button {
         width: rem(35);
         display: flex;
-        margin-right: 20px;
+        margin-right: rem(20);
         svg {
             width: rem(25);
             height: rem(25);
         }
     }
     .input {
-        height: 60px;
+        height: rem(60);
         border: none;
         background-color: transparent;
         font-size: rem(18);

@@ -33,12 +33,6 @@
             height: rem(16);
             fill: var(--bg-primary);
         }
-        // @media (any-hover: hover) {
-        //     &:hover {
-        //         background-color: var(--secondary);
-        //         transition: background-color 0.3s;
-        //     }
-        // }
         .touch & {
             display: flex;
             justify-content: center;

@@ -1,6 +1,6 @@
 .footer {
     @include adaptiveValue("padding-top", 50, 30);
-    padding-bottom: 25px;
+    padding-bottom: rem(25);
     color: var(--text-primary);
     font-size: rem(16);
     font-weight: 300;
@@ -87,6 +87,7 @@
         }
     }
 }
+
 .menu-footer {
     &__title {
         margin-bottom: em(10, 20);

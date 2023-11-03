@@ -19,12 +19,17 @@
                     <div class="checkout__container">
                         <form action="#" class="checkout__form form-checkout">
                             <div class="form-checkout__info">
+                                <div
+                                    class="form-checkout__title title title_m"
+                                >
+                                    Billing Details
+                                </div>
+                                <div
+                                    class="form-checkout__title title title_m"
+                                >
+                                    Additional Information
+                                </div>
                                 <div class="form-checkout__billing">
-                                    <div
-                                        class="form-checkout__title title title_m"
-                                    >
-                                        Billing Details
-                                    </div>
                                     <label>
                                         First name
                                         <input
@@ -61,7 +66,7 @@
                                             autocomplete="off"
                                             type="text"
                                             name="country"
-                                            placeholder="United States (US)"
+                                            placeholder=""
                                             class="input"
                                         />
                                     </label>
@@ -98,7 +103,7 @@
                                             autocomplete="off"
                                             type="text"
                                             name="state"
-                                            placeholder="Florida"
+                                            placeholder=""
                                             class="input"
                                         />
                                     </label>
@@ -132,13 +137,8 @@
                                             class="input"
                                         />
                                     </label>
-                                </div>
+                                </div>                                
                                 <div class="form-checkout__additional">
-                                    <div
-                                        class="form-checkout__title title title_m"
-                                    >
-                                        Additional Information
-                                    </div>
                                     <label>
                                         Order notes (optional)
                                         <input
@@ -231,7 +231,7 @@
                                     >
                                 </div>
                             </div>
-                            <button type="submit" class="button">
+                            <button type="submit" class="form-checkout__button button">
                                 Place an order
                             </button>
                         </form>
