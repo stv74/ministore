@@ -196,8 +196,14 @@
         font-weight: 400;
         letter-spacing: em(1.2, 20);
         text-transform: uppercase;
+        transition: color 0.3s;
         &.active {
             color: var(--secondary);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--secondary);
+            }
         }
     }
 }

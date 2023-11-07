@@ -4,8 +4,8 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="blog-post">
-                <article class="blog-post__post post">
+            <main class="blog-post-page">
+                <article class="blog-post-page__post post">
                     <div class="post__container">
                         <div class="post__subtitle">
                             feb 22, 2023 - technology
@@ -109,35 +109,35 @@
                                 <div class="social-post__title">Share:</div>
                                 <div class="social-post__body">
                                     <a href="#">
-                                        <svg>
+                                        <svg width="20" height="20">
                                             <use
                                                 xlink:href="@img/icons/icons.svg#facebook"
                                             ></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg>
+                                        <svg width="20" height="20">
                                             <use
                                                 xlink:href="@img/icons/icons.svg#insta"
                                             ></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg>
+                                        <svg width="20" height="20">
                                             <use
                                                 xlink:href="@img/icons/icons.svg#twitter"
                                             ></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg>
+                                        <svg width="20" height="20">
                                             <use
                                                 xlink:href="@img/icons/icons.svg#linkedin"
                                             ></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg>
+                                        <svg width="20" height="20">
                                             <use
                                                 xlink:href="@img/icons/icons.svg#youtube"
                                             ></use>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="post__slider slider-post">
                             <a href="#" class="slider-post__link title title_s">
-                                <svg>
+                                <svg width="22" height="45">
                                     <use
                                         xlink:href="@img/icons/icons.svg#arrow-sl"
                                     ></use>
@@ -160,7 +160,7 @@
                                 class="slider-post__link slider-post__next title title_s"
                             >
                                 Top 10 small camera in the world
-                                <svg>
+                                <svg width="22" height="45">
                                     <use
                                         xlink:href="@img/icons/icons.svg#arrow-sr"
                                     ></use>
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                 </article>
-                <section class="blog-post__comments comments">
+                <section class="blog-post-page__comments comments">
                     <div class="comments__container">
                         <div class="comments__body">
                             <div class="comments__title title title_m">
@@ -269,23 +269,20 @@
                                     <input
                                         autocomplete="off"
                                         type="text"
-                                        name="form[]"
-                                        data-error="Error"
+                                        name="user_name"
                                         placeholder="Write your name here *"
                                         class="input"
                                     />
                                     <input
                                         autocomplete="off"
                                         type="text"
-                                        name="form[]"
-                                        data-error="Error"
+                                        name="email"
                                         placeholder="Write your email here *"
                                         class="input"
                                     />
                                 </div>
                                 <textarea
-                                    name=""
-                                    id=""
+                                    name="comment_text"
                                     cols="30"
                                     rows="8"
                                     class="input"
@@ -302,7 +299,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="blog-post__posts posts">
+                <section class="blog-post-page__posts posts">
                     <div class="posts__container">
                         <div class="posts__head head-section">
                             <h2 class="head-section__title title title_m">
@@ -371,7 +368,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="blog-post__subscribe subscribe">
+                <section class="blog-post-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -387,8 +384,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="blog-post_subscribe"
                                     placeholder="Your email address here"
                                     class="input"
                                 />
@@ -402,7 +398,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="blog-post__insta insta">
+                <section class="blog-post-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
@@ -414,7 +410,7 @@
                                         src="@img/insta/image_1.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -427,7 +423,7 @@
                                         src="@img/insta/image_2.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -440,7 +436,7 @@
                                         src="@img/insta/image_3.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -453,7 +449,7 @@
                                         src="@img/insta/image_4.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -466,7 +462,7 @@
                                         src="@img/insta/image_5.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>

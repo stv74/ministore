@@ -4,10 +4,10 @@
     @include adaptiveValue("padding-bottom", 60, 25);
     &__container {
         display: flex;
-        gap: 20px;
+        gap: rem(20);
         @media (max-width: $mobile) {
             flex-direction: column;
-            gap: 40px;
+            gap: rem(40);
         }
     }
     &__info {
@@ -26,11 +26,11 @@
     }
     &__body {
         display: flex;
-        gap: 20px;
+        gap: rem(20);
         justify-content: space-between;
         @media (max-width: $mobileSmall) {
             flex-direction: column;
-            gap: 30px;
+            gap: rem(30);
         }
     }
     &__item {
@@ -55,14 +55,14 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 30px;
+    gap: rem(30);
     &__wrap {
         display: flex;
-        gap: 20px;
+        gap: rem(20);
         width: 100%;
         @media (max-width: $tablet) {
             flex-direction: column;
-            gap: 30px;
+            gap: rem(30);
         }
     }
 }
@@ -74,11 +74,11 @@
     &__container {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: rem(20);
         @media (max-width: $mobile) {
             flex-direction: column-reverse;
             align-items: stretch;
-            gap: 40px;
+            gap: rem(40);
         }
     }
     &__img {

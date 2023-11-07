@@ -46,7 +46,7 @@
     }
     &__pagination {
         @media (max-width: $mobile) {
-            margin-bottom: 50px;
+            margin-bottom: rem(50);
         }
     }
 }

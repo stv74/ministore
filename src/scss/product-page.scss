@@ -1,20 +1,12 @@
-.page {
-    &__product {
-    }
-    &__product-info {
-    }
-}
-
 // Section Product
 .product {
     @include adaptiveValue("padding-top", 192, 122);
     @include adaptiveValue("padding-bottom", 60, 25);
     &__container {
         display: flex;
-        gap: 20px;
+        gap: rem(20);
         @media (max-width: em(600)) {
             flex-direction: column-reverse;
-            grid-area: 40px;
         }
     }
     &__img {
@@ -55,10 +47,6 @@
     &__descr {
         font-weight: 300;
     }
-    &__options {
-    }
-    &__quantity {
-    }
     &__additional {
         > div,
         p {
@@ -66,8 +54,6 @@
                 margin-bottom: em(10, 16);
             }
         }
-    }
-    &__tax {
     }
 }
 
@@ -97,7 +83,7 @@
     }
     &__buttons {
         display: flex;
-        gap: 15px;
+        gap: rem(15);
         @media (max-width: $mobile) {
             flex-direction: column;
         }
@@ -114,10 +100,6 @@
 .product-info {
     @include adaptiveValue("padding-top", 60, 25);
     @include adaptiveValue("padding-bottom", 120, 50);
-    &__container {
-    }
-    &__tabs {
-    }
 }
 .tabs-product {
     &__navigation {

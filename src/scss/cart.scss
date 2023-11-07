@@ -147,9 +147,9 @@
     }
     &__price {
         color: var(--secondary);
-        font-size: 20px;
+        font-size: rem(20);
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.6px;
+        letter-spacing: em(0.6, 20);
     }
 }

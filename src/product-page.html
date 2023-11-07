@@ -4,8 +4,8 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page">
-                <section class="page__product product">
+            <main class="product-page">
+                <section class="product-page__product product">
                     <div class="product__container">
                         <div class="product__img">
                             <img
@@ -18,7 +18,7 @@
                                 Pink Watch
                             </h1>
                             <div class="about-product__rating">
-                                <svg>
+                                <svg width="17" height="17">
                                     <use
                                         xlink:href="@img/icons/icons.svg#star"
                                     ></use>
@@ -67,7 +67,7 @@
                                             data-quantity-value
                                             autocomplete="off"
                                             type="text"
-                                            name="form[]"
+                                            name="quantity_product"
                                             value="1"
                                         />
                                     </div>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__product-info product-info">
+                <section class="product-page__product-info product-info">
                     <div class="product-info__container">
                         <div
                             data-tabs="767.98"
@@ -369,23 +369,20 @@
                                                     <input
                                                         autocomplete="off"
                                                         type="text"
-                                                        name="form[]"
-                                                        data-error="Error"
+                                                        name="name_review"
                                                         placeholder="Write your name here *"
                                                         class="input"
                                                     />
                                                     <input
                                                         autocomplete="off"
                                                         type="text"
-                                                        name="form[]"
-                                                        data-error="Error"
+                                                        name="email_review"
                                                         placeholder="Write your email here *"
                                                         class="input"
                                                     />
                                                 </div>
                                                 <textarea
-                                                    name=""
-                                                    id=""
+                                                    name="text_review"
                                                     cols="30"
                                                     rows="8"
                                                     class="input"
@@ -406,11 +403,11 @@ Write your comment here *</textarea
                         </div>
                     </div>
                 </section>
-                <section class="page__products products">
+                <section class="product-page__products products">
                     <div class="products__container">
                         <div class="products__head head-section">
                             <h2 class="head-section__title title title_m">
-                                Related Products
+                                Mobile Products
                             </h2>
                             <a href="#" class="head-section__link"
                                 >Go to Shop</a
@@ -430,7 +427,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -461,7 +458,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -492,7 +489,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -523,7 +520,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -554,7 +551,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -585,7 +582,7 @@ Write your comment here *</textarea
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -611,7 +608,7 @@ Write your comment here *</textarea
                         </div>
                     </div>
                 </section>
-                <section class="page__subscribe subscribe">
+                <section class="product-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -627,8 +624,7 @@ Write your comment here *</textarea
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="product-page_subscribe"
                                     placeholder="Your email address here"
                                     class="input"
                                 />
@@ -642,7 +638,7 @@ Write your comment here *</textarea
                         </div>
                     </div>
                 </section>
-                <section class="page__insta insta">
+                <section class="product-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
@@ -654,7 +650,7 @@ Write your comment here *</textarea
                                         src="@img/insta/image_1.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -667,7 +663,7 @@ Write your comment here *</textarea
                                         src="@img/insta/image_2.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -680,7 +676,7 @@ Write your comment here *</textarea
                                         src="@img/insta/image_3.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -693,7 +689,7 @@ Write your comment here *</textarea
                                         src="@img/insta/image_4.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -706,7 +702,7 @@ Write your comment here *</textarea
                                         src="@img/insta/image_5.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>

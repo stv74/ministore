@@ -4,8 +4,8 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page">
-                <section class="page__head head-page">
+            <main class="contact-page">
+                <section class="contact-page__head head-page">
                     <div class="head-page__container">
                         <h1 class="head-page__title title">Contacts</h1>
                         <div class="head-page__breadcrumbs breadcrumbs">
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__contacts contacts">
+                <section class="contact-page__contacts contacts">
                     <div class="contacts__container">
                         <div class="contacts__info info-contacts">
                             <div class="info-contacts__head head-contacts">
@@ -48,7 +48,7 @@
                                         >
                                     </p>
                                     <p>
-                                        <a href="mailto:ministore@yourinfo.com"
+                                        <a target="_blank" href="mailto:ministore@yourinfo.com"
                                             >ministore@yourinfo.com</a
                                         >
                                     </p>
@@ -73,7 +73,7 @@
                                         >
                                     </p>
                                     <p>
-                                        <a href="mailto:ministore@yourinfo.com"
+                                        <a target="_blank" href="mailto:ministore@yourinfo.com"
                                             >ministore@yourinfo.com</a
                                         >
                                     </p>
@@ -97,16 +97,14 @@
                                     <input
                                         autocomplete="off"
                                         type="text"
-                                        name="form[]"
-                                        data-error="Error"
+                                        name="full_name"
                                         placeholder="Your full name *"
                                         class="form-contacts__input input"
                                     />
                                     <input
                                         autocomplete="off"
                                         type="text"
-                                        name="form[]"
-                                        data-error="Error"
+                                        name="email"
                                         placeholder="Write your email here *"
                                         class="form-contacts__input input"
                                     />
@@ -114,24 +112,21 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Error"
+                                    name="phone"
                                     placeholder="Phone number"
                                     class="form-contacts__input input"
                                 />
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Error"
+                                    name="subject"
                                     placeholder="Write your subject here"
                                     class="form-contacts__input input"
                                 />
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Error"
+                                    name="message"
                                     placeholder="Write your message here *"
                                     class="form-contacts__input input"
                                 />
@@ -145,7 +140,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__shops shops">
+                <section class="contact-page__shops shops">
                     <div class="shops__container">
                         <div class="shops__img">
                             <img
@@ -184,7 +179,7 @@
                                         >
                                     </p>
                                     <p>
-                                        <a href="mailto:ministore@yourinfo.com"
+                                        <a target="_blank" href="mailto:ministore@yourinfo.com"
                                             >ministore@yourinfo.com</a
                                         >
                                     </p>
@@ -209,7 +204,7 @@
                                         >
                                     </p>
                                     <p>
-                                        <a href="mailto:ministore@yourinfo.com"
+                                        <a target="_blank" href="mailto:ministore@yourinfo.com"
                                             >ministore@yourinfo.com</a
                                         >
                                     </p>
@@ -218,7 +213,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__subscribe subscribe">
+                <section class="contact-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -234,8 +229,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="home_subscribe"
                                     placeholder="Your email address here"
                                     class="input"
                                 />
@@ -249,7 +243,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__insta insta">
+                <section class="contact-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
@@ -261,7 +255,7 @@
                                         src="@img/insta/image_1.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -274,7 +268,7 @@
                                         src="@img/insta/image_2.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -287,7 +281,7 @@
                                         src="@img/insta/image_3.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -300,7 +294,7 @@
                                         src="@img/insta/image_4.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -313,7 +307,7 @@
                                         src="@img/insta/image_5.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>

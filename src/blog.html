@@ -4,8 +4,8 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page">
-                <section class="page__head head-page">
+            <main class="blog-page">
+                <section class="blog-page__head head-page">
                     <div class="head-page__container">
                         <h1 class="head-page__title title">Blog</h1>
                         <div class="head-page__breadcrumbs breadcrumbs">
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__catalog catalog">
+                <section class="blog-page__catalog catalog">
                     <div class="catalog__container catalog__container_l">
                         <aside class="catalog__sidebar sidebar">
                             <form
@@ -25,8 +25,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="blog_search"
                                     placeholder="Search"
                                     class="input"
                                 />
@@ -34,7 +33,7 @@
                                     type="submit"
                                     class="search-form__button"
                                 >
-                                    <svg>
+                                    <svg width="21" height="21"> 
                                         <use
                                             xlink:href="@img/icons/icons.svg#search"
                                         ></use>
@@ -311,7 +310,7 @@
                             </div>
                             <div class="catalog__pagination pagination">
                                 <button class="pagination__button disabled">
-                                    <svg>
+                                    <svg width="22" height="45">
                                         <use
                                             xlink:href="@img/icons/icons.svg#arrow-sl"
                                         ></use>
@@ -323,7 +322,7 @@
                                 <a href="#" class="pagination__link">2</a>
                                 <a href="#" class="pagination__link">3</a>
                                 <button class="pagination__button">
-                                    <svg>
+                                    <svg width="22" height="45">
                                         <use
                                             xlink:href="@img/icons/icons.svg#arrow-sr"
                                         ></use>
@@ -333,7 +332,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__subscribe subscribe">
+                <section class="blog-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -349,8 +348,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="blog_subscribe"
                                     placeholder="Your email address here"
                                     class="input"
                                 />
@@ -364,7 +362,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__insta insta">
+                <section class="blog-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
@@ -376,7 +374,7 @@
                                         src="@img/insta/image_1.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -389,7 +387,7 @@
                                         src="@img/insta/image_2.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -402,7 +400,7 @@
                                         src="@img/insta/image_3.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -415,7 +413,7 @@
                                         src="@img/insta/image_4.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -428,7 +426,7 @@
                                         src="@img/insta/image_5.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
