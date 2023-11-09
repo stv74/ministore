@@ -4,8 +4,8 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page">
-                <section class="page__head head-page">
+            <main class="shop-page">
+                <section class="shop-page__head head-page">
                     <div class="head-page__container">
                         <h1 class="head-page__title title">Shop</h1>
                         <div class="head-page__breadcrumbs breadcrumbs">
@@ -15,30 +15,32 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__catalog catalog">
+                <section class="shop-page__catalog catalog">
                     <div class="catalog__container">
                         <div class="catalog__body">
                             <div class="catalog__head head-catalog">
                                 <div class="head-catalog__amount">
                                     Showing 1–9 of 55 results
                                 </div>
-                                <select name="form[]" data-class-modif="form">
-                                    <option value="1" selected>
-                                        Default sorting
-                                    </option>
-                                    <option value="2">Name (A - Z)</option>
-                                    <option value="3">Name (Z - A)</option>
-                                    <option value="4">
-                                        Price (Low - High)
-                                    </option>
-                                    <option value="5">
-                                        Price (High - Low)
-                                    </option>
-                                    <option value="6">
-                                        Price (High - Low)
-                                    </option>
-                                    <option value="7">Popular sorting</option>
-                                </select>
+                                <form action="#" class="head-catalog__select">
+                                    <select data-submit name="shop_select" data-class-modif="shop">
+                                        <option value="1" selected>
+                                            Default sorting
+                                        </option>
+                                        <option value="2">Name (A - Z)</option>
+                                        <option value="3">Name (Z - A)</option>
+                                        <option value="4">
+                                            Price (Low - High)
+                                        </option>
+                                        <option value="5">
+                                            Price (High - Low)
+                                        </option>
+                                        <option value="6">
+                                            Price (High - Low)
+                                        </option>
+                                        <option value="7">Popular sorting</option>
+                                    </select>
+                                </form>
                             </div>
                             <div class="catalog__list">
                                 <div class="product-item">
@@ -51,7 +53,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -80,7 +82,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -109,7 +111,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -138,7 +140,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -167,7 +169,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -196,7 +198,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -225,7 +227,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -254,7 +256,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -283,7 +285,7 @@
                                             class="product-item__button button button_card"
                                         >
                                             <span>Add to cart</span>
-                                            <svg>
+                                            <svg width="16" height="16">
                                                 <use
                                                     xlink:href="@img/icons/icons.svg#cart"
                                                 ></use>
@@ -305,7 +307,7 @@
                             </div>
                             <div class="catalog__pagination pagination">
                                 <button class="pagination__button disabled">
-                                    <svg>
+                                    <svg width="22" height="45">
                                         <use
                                             xlink:href="@img/icons/icons.svg#arrow-sl"
                                         ></use>
@@ -317,7 +319,7 @@
                                 <a href="#" class="pagination__link">2</a>
                                 <a href="#" class="pagination__link">3</a>
                                 <button class="pagination__button">
-                                    <svg>
+                                    <svg width="22" height="45">
                                         <use
                                             xlink:href="@img/icons/icons.svg#arrow-sr"
                                         ></use>
@@ -333,8 +335,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="shop_search"
                                     placeholder="Search"
                                     class="input"
                                 />
@@ -342,7 +343,7 @@
                                     type="submit"
                                     class="search-form__button"
                                 >
-                                    <svg>
+                                    <svg width="21" height="21">
                                         <use
                                             xlink:href="@img/icons/icons.svg#search"
                                         ></use>
@@ -467,7 +468,7 @@
                         </aside>
                     </div>
                 </section>
-                <section class="page__subscribe subscribe">
+                <section class="shop-page__subscribe subscribe">
                     <div class="subscribe__container">
                         <div class="subscribe__body">
                             <div class="subscribe__content">
@@ -483,8 +484,7 @@
                                 <input
                                     autocomplete="off"
                                     type="text"
-                                    name="form[]"
-                                    data-error="Помилка"
+                                    name="shop_subscribe"
                                     placeholder="Your email address here"
                                     class="input"
                                 />
@@ -498,7 +498,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__insta insta">
+                <section class="shop-page__insta insta">
                     <div class="insta__container">
                         <h2 class="insta__title title title_m">
                             Shop our insta
@@ -510,7 +510,7 @@
                                         src="@img/insta/image_1.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -523,7 +523,7 @@
                                         src="@img/insta/image_2.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -536,7 +536,7 @@
                                         src="@img/insta/image_3.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -549,7 +549,7 @@
                                         src="@img/insta/image_4.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>
@@ -562,7 +562,7 @@
                                         src="@img/insta/image_5.jpg"
                                         alt="The post in Instagramm"
                                     />
-                                    <svg class="item-insta__icon">
+                                    <svg width="30" height="32" class="item-insta__icon">
                                         <use
                                             xlink:href="@img/icons/icons.svg#insta"
                                         ></use>

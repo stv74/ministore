@@ -85,11 +85,11 @@
         // Максимальна висота
         max-height: rem(300);
         // Стилі скроллбару
-        .simplebar-scrollbar {
-            &::before {
-                //opacity: 1;
-            }
-        }
+        // .simplebar-scrollbar {
+        //     &::before {
+        //         opacity: 1;
+        //     }
+        // }
     }
     // .select__option
     &__option {
@@ -113,10 +113,10 @@
         display: inline-flex;
         align-items: center;
     }
-    &__asset {
-    }
-    &__text {
-    }
+    // &__asset {
+    // }
+    // &__text {
+    // }
 
     &--show-top {
         .select__options {
@@ -130,18 +130,18 @@
     }
 
     // Стан селекту
-    &._select-open {
-    }
-    &._select-disabled {
-    }
-    &._select-active {
-    }
-    &._select-focus {
-    }
-    &._select-multiple {
-    }
-    &._select-checkbox {
-    }
+    // &._select-open {
+    // }
+    // &._select-disabled {
+    // }
+    // &._select-active {
+    // }
+    // &._select-focus {
+    // }
+    // &._select-multiple {
+    // }
+    // &._select-checkbox {
+    // }
 }
 
 // Тег

@@ -6,7 +6,7 @@
         display: flex;
         gap: rem(20);
         @media (max-width: em(600)) {
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
     &__img {
