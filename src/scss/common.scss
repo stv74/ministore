@@ -8,13 +8,13 @@
     padding: 0;
     position: absolute;
     width: 1px;
-  }
+}
 
 // Titles
 .title {
     color: var(--primary);
     font-family: Jost;
-    @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
+    font-size: rem(83);
     font-weight: 300;
     line-height: 1.14;
     letter-spacing: em(1.66, 83);
@@ -37,6 +37,7 @@
     padding: rem(150) 0 rem(77) 0;
     background-color: var(--bg-secondary);
     &__title {
+        @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
         text-align: center;
         margin-bottom: em(10, 83);
     }

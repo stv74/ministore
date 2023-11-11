@@ -59,6 +59,7 @@
         }
     }
     &__title {
+        @include adaptiveValue("font-size", 83, 55, 0, 1330, 680);
         margin-bottom: em(40, 83);
     }
     &__button {
