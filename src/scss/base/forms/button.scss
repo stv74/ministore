@@ -24,7 +24,7 @@
     &_card {
         padding: em(8, 14) em(30, 14);
         align-items: center;
-        gap: em(8, 14);
+        column-gap: em(8, 14);
         span {
             white-space: nowrap;
         }
